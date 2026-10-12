@@ -6,58 +6,66 @@
 <meta name="theme-color" content="#820ad1">
 <title>Nubank</title>
 <style>
-:root{--nu:#820ad1;--nu-dark:#6a08ac;--bg:#0b0b0f;--pill:#1a1a1e;--text:#fff;--muted:#a3a3ad;--border:#26262d;--green:#36c98f;--red:#ff6b78}
+:root{--nu:#820ad1;--nu-dark:#6a08ac;--bg:#0b0b0f;--pill:#1a1a1e;--card:#141418;--text:#fff;--muted:#a3a3ad;--border:#26262d;--green:#36c98f;--red:#ff6b78}
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 html,body{margin:0;padding:0;min-height:100%}
 body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;-webkit-font-smoothing:antialiased;padding-bottom:100px}
 button,input,select,textarea{font:inherit;color:inherit}
 button{cursor:pointer;border:0;background:none;padding:0}
 h1{font-size:22px;font-weight:700;margin:22px 20px 14px;letter-spacing:-.3px}
-
-.app-header{background:var(--nu);padding:18px 20px 26px}
-.header-top{display:flex;align-items:flex-start;justify-content:space-between;gap:14px}
+.app-header{background:var(--nu);padding:18px 20px 24px}
+.header-top{display:flex;align-items:center;justify-content:space-between;gap:14px}
+.header-left{display:flex;align-items:center;gap:12px}
 .avatar{width:52px;height:52px;border-radius:50%;background:rgba(255,255,255,.18);display:flex;align-items:center;justify-content:center;position:relative;cursor:pointer}
 .avatar svg{width:26px;height:26px;stroke:#fff;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 .avatar .dot{position:absolute;top:2px;right:2px;width:12px;height:12px;border-radius:50%;background:#fff;border:2px solid var(--nu)}
-.header-icons{display:flex;gap:20px;align-items:center;padding-top:6px}
+.nu-logo{display:inline-flex;align-items:center;justify-content:center;background:#fff;border-radius:10px;width:40px;height:40px;color:#820ad1;font-weight:900;font-size:20px;letter-spacing:-1.2px;line-height:1}
+.header-icons{display:flex;gap:18px;align-items:center}
 .header-icons button{color:#fff;width:26px;height:26px;display:flex;align-items:center;justify-content:center}
 .header-icons svg{width:24px;height:24px;stroke:#fff;fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
-.greeting{font-size:17px;font-weight:500;color:#fff;margin:22px 0 0}
+.greeting{font-size:17px;font-weight:500;color:#fff;margin:20px 0 0}
 main{max-width:820px;margin:0 auto;padding:0 0 30px}
-
 .account-block{padding:22px 20px 8px}
 .account-top{display:flex;align-items:center;justify-content:space-between;gap:10px}
 .account-label{font-size:15px;font-weight:500;color:#fff}
 .account-arrow{color:var(--muted);display:flex}
 .account-arrow svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round}
 .balance-big{font-size:26px;font-weight:600;letter-spacing:-.3px;margin:6px 0 0;overflow-wrap:anywhere}
-
-.actions-scroll{display:flex;gap:6px;overflow-x:auto;padding:26px 14px 8px;scrollbar-width:none}
+.actions-scroll{display:flex;gap:4px;overflow-x:auto;padding:22px 14px 8px;scrollbar-width:none}
 .actions-scroll::-webkit-scrollbar{display:none}
-.action-circle{display:flex;flex-direction:column;align-items:center;gap:9px;min-width:78px;padding:0 4px;color:#fff;flex-shrink:0;background:none;border:0}
-.action-circle .circle{width:70px;height:70px;border-radius:50%;background:var(--pill);display:grid;place-items:center;transition:transform .1s ease}
+.action-circle{display:flex;flex-direction:column;align-items:center;gap:9px;min-width:82px;padding:0 3px;color:#fff;flex-shrink:0;background:none;border:0;position:relative}
+.action-circle .circle{width:68px;height:68px;border-radius:50%;background:var(--pill);display:grid;place-items:center;transition:transform .1s ease}
 .action-circle:active .circle{transform:scale(.94)}
-.action-circle .circle svg{width:26px;height:26px;stroke:#fff;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-.action-circle span:last-child{font-size:12.5px;color:#fff;font-weight:500;white-space:nowrap}
-
-.pill-card{display:flex;align-items:center;gap:16px;background:var(--pill);border-radius:16px;padding:20px;margin:10px 18px;color:#fff;cursor:pointer;transition:background .15s ease}
-.pill-card:active{background:#232328}
+.action-circle .circle svg{width:24px;height:24px;stroke:#fff;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.action-circle .badge{position:absolute;bottom:44px;background:var(--nu);color:#fff;font-size:9px;font-weight:700;padding:2px 5px;border-radius:4px}
+.action-circle span:last-child{font-size:11.5px;color:#fff;font-weight:500;text-align:center;line-height:1.25;max-width:78px}
+.pill-card{display:flex;align-items:center;gap:16px;background:var(--pill);border-radius:16px;padding:20px;margin:10px 18px;color:#fff;cursor:pointer}
 .pill-card .pill-icon{width:34px;height:34px;flex-shrink:0;display:flex;align-items:center;justify-content:center}
-.pill-card .pill-icon svg{width:26px;height:26px;stroke:#fff;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.pill-card .pill-icon svg{width:24px;height:24px;stroke:#fff;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
 .pill-card .pill-text{flex:1;font-size:15px;font-weight:600;color:#fff}
 .pill-card .pill-right{font-size:14px;color:#fff;font-weight:500}
-.section-title{font-size:15px;font-weight:600;color:#fff;margin:26px 20px 12px;padding-top:12px;border-top:1px solid var(--border)}
-
+.banner{background:var(--pill);border-radius:16px;padding:18px 20px;margin:14px 18px;display:flex;align-items:center;gap:14px}
+.banner .banner-text{flex:1;font-size:13.5px;color:#fff;line-height:1.4}
+.banner .banner-icon{font-size:28px}
+.section-title{font-size:16px;font-weight:700;color:#fff;margin:26px 20px 12px;padding-top:12px;border-top:1px solid var(--border)}
+.limit-card{background:var(--card);border-radius:16px;padding:18px 20px;margin:0 18px 12px;border:1px solid var(--border)}
+.limit-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+.limit-label{font-size:13px;color:var(--muted)}
+.limit-value{font-size:17px;font-weight:700;color:#fff}
+.progress{height:6px;background:#2a2a30;border-radius:3px;overflow:hidden;margin-top:8px}
+.progress-bar{height:100%;background:var(--nu);border-radius:3px}
+.limit-foot{font-size:12px;color:var(--muted);margin-top:8px;display:flex;justify-content:space-between}
 .view{display:none}
 .view.active{display:block}
 .field{display:grid;gap:7px;margin-bottom:14px}
 .field label{font-size:13px;font-weight:600;color:#d5d5dc}
-.field input,.field textarea{width:100%;background:#151519;border:1px solid #2f2f38;border-radius:12px;padding:14px;min-height:48px;outline:none;transition:border-color .15s ease}
-.field input:focus,.field textarea:focus{border-color:var(--nu)}
+.field input,.field textarea,.field select{width:100%;background:#151519;border:1px solid #2f2f38;border-radius:12px;padding:14px;min-height:48px;outline:none;transition:border-color .15s ease}
+.field input:focus,.field textarea:focus,.field select:focus{border-color:var(--nu)}
 .field textarea{min-height:80px;resize:vertical}
 .field input::placeholder,.field textarea::placeholder{color:#6d6d78}
+.field-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .form-wrap{padding:0 18px}
-
+.hint{font-size:11px;color:#7a7a82;margin-top:2px}
 .button{background:var(--nu);color:#fff;border:0;border-radius:14px;padding:15px 20px;font-weight:700;min-height:50px;font-size:15px;display:inline-flex;align-items:center;justify-content:center;gap:8px}
 .button:hover{background:var(--nu-dark)}
 .button:active{transform:scale(.98)}
@@ -65,7 +73,6 @@ main{max-width:820px;margin:0 auto;padding:0 0 30px}
 .button.secondary{background:#26262d;color:#fff}
 .button.danger{background:#3a1a22;color:#ffb3bd}
 .button-row{display:flex;flex-wrap:wrap;gap:10px;padding:0 18px}
-
 .tx{display:flex;align-items:center;gap:14px;padding:16px 20px;border-bottom:1px solid var(--border)}
 .tx:last-child{border-bottom:0}
 .tx-icon{width:44px;height:44px;flex:0 0 44px;border-radius:50%;background:#1f1f25;display:flex;align-items:center;justify-content:center;color:#c98eff}
@@ -79,51 +86,67 @@ main{max-width:820px;margin:0 auto;padding:0 0 30px}
 .tx-amount.in{color:var(--green)}
 .tx-btn{margin-top:6px;font-size:11.5px;color:#c98eff;font-weight:600;cursor:pointer}
 .empty{padding:36px 20px;color:var(--muted);text-align:center;font-size:13.5px;line-height:1.6}
-
 .menu-item{display:flex;align-items:center;gap:16px;padding:18px 20px;border-bottom:1px solid var(--border);cursor:pointer}
 .menu-item:last-child{border-bottom:0}
 .menu-icon{width:40px;height:40px;border-radius:50%;background:#1f1f25;display:flex;align-items:center;justify-content:center;color:#c98eff;flex-shrink:0}
 .menu-icon svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
 .menu-text{flex:1;font-size:15px;font-weight:500}
 .menu-arrow{margin-left:auto;color:var(--muted);font-size:20px}
-
+.credit-card{border-radius:18px;padding:22px;min-height:200px;background:linear-gradient(135deg,#820ad1,#51118e 65%,#28133e);box-shadow:0 14px 35px rgba(130,10,209,.35);display:flex;flex-direction:column;justify-content:space-between;margin:18px;position:relative;overflow:hidden}
+.credit-card::after{content:"";position:absolute;right:-50px;bottom:-50px;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.08),transparent 70%)}
+.cc-top{display:flex;justify-content:space-between;align-items:center;position:relative;z-index:1}
+.cc-brand{display:inline-flex;align-items:center;justify-content:center;background:#fff;border-radius:8px;width:38px;height:38px;color:#820ad1;font-weight:900;font-size:18px;letter-spacing:-.8px}
+.chip{width:38px;height:28px;border-radius:6px;position:relative;background:linear-gradient(135deg,#e8d8a4,#a88c55);border:1px solid #f2d9a0}
+.chip::before,.chip::after{content:"";position:absolute;border:1px solid #8f7544}
+.chip::before{inset:8px 0;border-left:0;border-right:0}
+.chip::after{inset:0 11px;border-top:0;border-bottom:0}
+.cc-number{font-size:19px;letter-spacing:3px;margin:26px 0 18px;position:relative;z-index:1;font-weight:600;color:#fff}
+.cc-bottom{display:flex;justify-content:space-between;font-size:11px;position:relative;z-index:1;text-transform:uppercase;letter-spacing:.5px;color:#e0c8ff}
+.cc-bottom strong{display:block;font-size:13px;color:#fff;margin-top:3px}
 nav{position:fixed;bottom:0;left:0;right:0;z-index:30;background:#0b0b0ff5;backdrop-filter:blur(18px);border-top:1px solid var(--border);display:grid;grid-template-columns:repeat(5,1fr);padding:10px 6px 14px}
 .nav-btn{color:var(--muted);display:grid;justify-items:center;gap:5px;padding:4px 0;font-size:10.5px;font-weight:600;background:none;border:0}
 .nav-btn svg{width:24px;height:24px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 .nav-btn.active{color:#fff}
-
 .toast{position:fixed;top:86px;left:50%;transform:translateX(-50%);z-index:60;background:#f5f1fa;color:#202027;padding:14px 20px;border-radius:12px;max-width:90%;box-shadow:0 12px 40px rgba(0,0,0,.5);font-size:13.5px;font-weight:600;display:none}
 .toast.show{display:block}
 .toast.error{background:#ffe3e5;color:#751a28}
-
-.receipt-page{max-width:600px;margin:0 auto;padding:26px 24px 60px;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;color:#111}
-.receipt-back{background:#f0f0f2;border:0;border-radius:10px;padding:10px 14px;font-weight:600;color:#333;font-size:13px;margin-bottom:22px;cursor:pointer}
-.receipt-nu{color:#820ad1;font-size:26px;font-weight:800;letter-spacing:-1.5px;margin:0 0 22px}
-.receipt-h1{font-size:23px;font-weight:800;color:#111;margin:0 0 4px;letter-spacing:-.4px}
-.receipt-date{font-size:12px;color:#8b8b8b;margin:0 0 26px;text-transform:uppercase;letter-spacing:.5px}
-.rrow{display:flex;justify-content:space-between;gap:16px;padding:14px 0;font-size:14px;border-bottom:1px solid #f0f0f0}
+.receipt-page{max-width:620px;margin:0 auto;padding:24px 22px 60px;color:#fff}
+.receipt-back{background:#1a1a1e;border:1px solid #2a2a30;border-radius:10px;padding:10px 14px;font-weight:600;color:#fff;font-size:13px;margin-bottom:24px;cursor:pointer}
+.receipt-logo{display:inline-flex;align-items:center;justify-content:center;background:#820ad1;border-radius:10px;width:44px;height:44px;color:#fff;font-weight:900;font-size:22px;letter-spacing:-1.2px;margin:0 0 20px}
+.receipt-h1{font-size:24px;font-weight:800;color:#fff;margin:0 0 6px;letter-spacing:-.4px}
+.receipt-date{font-size:12px;color:#8b8b8b;margin:0 0 12px;text-transform:uppercase;letter-spacing:.5px}
+.receipt-status{display:inline-flex;align-items:center;gap:6px;background:#153a2c;color:var(--green);padding:5px 10px;border-radius:6px;font-size:11px;font-weight:700;margin-bottom:26px}
+.receipt-status svg{width:13px;height:13px;stroke:currentColor;fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+.rrow{display:flex;justify-content:space-between;gap:16px;padding:15px 0;font-size:14px;border-bottom:1px solid #1a1a1f}
 .rrow:last-of-type{border-bottom:0}
-.rrow .rlabel{color:#333;font-weight:600;flex:0 0 38%}
-.rrow .rvalue{color:#666;text-align:right;flex:1;overflow-wrap:anywhere}
-.rrow.destaque .rvalue{color:#111;font-weight:600}
-.receipt-box{background:#f5f5f7;border-radius:10px;padding:20px;margin-top:26px;font-size:12.5px;line-height:1.65;color:#555}
-.receipt-box .company{font-weight:600;color:#333;display:block;margin-bottom:2px}
-.receipt-box .cnpj-cut{display:block;color:#555;overflow:hidden;white-space:nowrap;width:170px}
-.receipt-box .auth-title{margin-top:16px;display:block;color:#333;font-weight:600}
-.receipt-box .auth-code{display:block;color:#333;word-break:break-all}
-.receipt-box .help-line{margin-top:16px;display:block;color:#777}
+.rrow .rlabel{color:#8b8b93;font-weight:500;flex:0 0 42%;font-size:13px}
+.rrow .rvalue{color:#fff;text-align:right;flex:1;overflow-wrap:anywhere;font-weight:500}
+.rrow.destaque{padding:20px 0;border-bottom:1px solid #1a1a1f}
+.rrow.destaque .rlabel{color:#fff;font-weight:600;font-size:14px}
+.rrow.destaque .rvalue{color:#fff;font-weight:700;font-size:16px}
+.receipt-section{margin-top:24px;padding-top:22px;border-top:1px solid #1a1a1f}
+.receipt-section-title{font-size:11px;font-weight:800;color:#820ad1;text-transform:uppercase;letter-spacing:1.2px;margin:0 0 14px}
+.receipt-box{background:#141418;border:1px solid #1f1f24;border-radius:12px;padding:20px;margin-top:26px;font-size:12.5px;line-height:1.7;color:#a8a8b0}
+.receipt-box .company{font-weight:600;color:#fff;display:block;margin-bottom:2px}
+.receipt-box .cnpj-cut{display:block;color:#a8a8b0;overflow:hidden;white-space:nowrap;width:175px}
+.receipt-box .auth-title{margin-top:16px;display:block;color:#fff;font-weight:600}
+.receipt-box .auth-code{display:block;color:#fff;word-break:break-all;font-family:ui-monospace,Menlo,monospace;font-size:11.5px}
+.receipt-box .help-line{margin-top:16px;display:block;color:#7a7a82}
 .receipt-box .help-link{color:#820ad1;font-weight:700;text-decoration:none;margin-top:6px;display:inline-block}
 .receipt-actions{display:grid;gap:10px;margin-top:32px}
 .receipt-actions button{min-height:48px;border:0;border-radius:12px;background:#820ad1;color:#fff;font-weight:700;font-size:14px;cursor:pointer}
-.receipt-actions button.light{background:#f0e5fa;color:#5c0a94}
+.receipt-actions button.light{background:#1f1f24;color:#c98eff;border:1px solid #2f2f38}
 </style>
 </head><body>
 
 <header class="app-header">
   <div class="header-top">
-    <div class="avatar" data-go="profile">
-      <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4.3 3.5-7 8-7s8 2.7 8 7"></path></svg>
-      <span class="dot"></span>
+    <div class="header-left">
+      <div class="avatar" data-go="profile">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4.3 3.5-7 8-7s8 2.7 8 7"></path></svg>
+        <span class="dot"></span>
+      </div>
+      <div class="nu-logo">nu</div>
     </div>
     <div class="header-icons">
       <button id="toggleBalance" aria-label="Mostrar saldo">
@@ -133,7 +156,7 @@ nav{position:fixed;bottom:0;left:0;right:0;z-index:30;background:#0b0b0ff5;backd
         <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M9.5 9a2.5 2.5 0 1 1 3.5 2.3c-.7.3-1 .9-1 1.7"></path><circle cx="12" cy="17" r=".5" fill="currentColor"></circle></svg>
       </button>
       <button data-info="Mensagens" aria-label="Mensagens">
-        <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 7 9 6 9-6"></path></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 22s8-4.5 8-11V5l-8-3-8 3v6c0 6.5 8 11 8 11z"></path><path d="m9 12 2 2 4-4"></path></svg>
       </button>
     </div>
   </div>
@@ -145,7 +168,7 @@ nav{position:fixed;bottom:0;left:0;right:0;z-index:30;background:#0b0b0ff5;backd
   <section class="view active" id="view-home">
     <div class="account-block">
       <div class="account-top">
-        <span class="account-label">Conta</span>
+        <span class="account-label">Saldo em conta</span>
         <span class="account-arrow"><svg viewBox="0 0 24 24"><path d="m9 6 6 6-6 6"></path></svg></span>
       </div>
       <div class="balance-big" id="balanceDisplay">R$ 1.250,00</div>
@@ -154,30 +177,29 @@ nav{position:fixed;bottom:0;left:0;right:0;z-index:30;background:#0b0b0ff5;backd
     <div class="actions-scroll">
       <button class="action-circle" data-go="pix">
         <span class="circle"><svg viewBox="0 0 24 24"><path d="M7 3H4v3M4 3l6 6M17 21h3v-3m0 3-6-6M21 7V4h-3m3 0-6 6M3 17v3h3m-3 0 6-6"></path></svg></span>
-        <span>Área Pix</span>
+        <span>Área Pix e Transferir</span>
       </button>
       <button class="action-circle" data-info="Em breve">
         <span class="circle"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="12" rx="2"></rect><path d="M2 11h20M6 15h4"></path></svg></span>
         <span>Pagar</span>
       </button>
-      <button class="action-circle" data-go="pix">
-        <span class="circle"><svg viewBox="0 0 24 24"><path d="M12 20V4M5 11l7-7 7 7"></path></svg></span>
-        <span>Transferir</span>
-      </button>
-      <button class="action-circle" data-go="add">
-        <span class="circle"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"></path></svg></span>
-        <span>Depositar</span>
+      <button class="action-circle" data-info="Em breve">
+        <span class="circle"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg></span>
+        <span>Pegar emprestado</span>
+        <span class="badge">FGTS</span>
       </button>
       <button class="action-circle" data-info="Recarga de celular">
         <span class="circle"><svg viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="2"></rect><path d="M11 18h2"></path></svg></span>
-        <span>Recarga</span>
+        <span>Recarga de celular</span>
       </button>
-    </div>
-
-    <div class="pill-card" data-info="Caixinhas em breve">
-      <div class="pill-icon"><svg viewBox="0 0 24 24"><path d="M3 10h18M5 6h14v14H5zM9 3v3M15 3v3"></path></svg></div>
-      <div class="pill-text">Caixinhas</div>
-      <div class="pill-right">R$ 0,00</div>
+      <button class="action-circle" data-info="Caixinhas">
+        <span class="circle"><svg viewBox="0 0 24 24"><path d="M3 10h18M5 6h14v14H5zM9 3v3M15 3v3"></path></svg></span>
+        <span>Caixinhas</span>
+      </button>
+      <button class="action-circle" data-info="Investir">
+        <span class="circle"><svg viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8"></path><path d="M14 7h7v7"></path></svg></span>
+        <span>Investir</span>
+      </button>
     </div>
 
     <div class="pill-card" data-go="cards">
@@ -186,18 +208,22 @@ nav{position:fixed;bottom:0;left:0;right:0;z-index:30;background:#0b0b0ff5;backd
       <div class="pill-right"></div>
     </div>
 
-    <div class="section-title">Acompanhe também</div>
-
-    <div class="pill-card" data-info="Assistente de pagamentos">
-      <div class="pill-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 8v4l3 2"></path></svg></div>
-      <div class="pill-text">Assistente de pagamentos</div>
-      <div class="pill-right"></div>
+    <div class="banner">
+      <div class="banner-text">Facilite seus planos futuros: guarde dinheiro nas Caixinhas</div>
+      <div class="banner-icon">💜</div>
     </div>
 
-    <div class="pill-card" data-go="statement">
-      <div class="pill-icon"><svg viewBox="0 0 24 24"><path d="M5 4h14v16H5zM8 8h8M8 12h8M8 16h5"></path></svg></div>
-      <div class="pill-text">Extrato da conta</div>
-      <div class="pill-right"></div>
+    <div class="section-title">Cartão para construir limite</div>
+    <div class="limit-card">
+      <div class="limit-top">
+        <span class="limit-label">Fatura atual</span>
+        <span class="limit-value">R$ 0,00</span>
+      </div>
+      <div class="progress"><div class="progress-bar" style="width:0%"></div></div>
+      <div class="limit-foot">
+        <span>Limite disponível</span>
+        <span>R$ 5.000,00</span>
+      </div>
     </div>
 
     <div class="section-title">Últimas movimentações</div>
@@ -208,11 +234,51 @@ nav{position:fixed;bottom:0;left:0;right:0;z-index:30;background:#0b0b0ff5;backd
     <h1>Área Pix</h1>
     <div class="form-wrap">
       <form id="pixForm">
-        <div class="field"><label for="pixName">Nome do destinatário</label><input id="pixName" required maxlength="100" placeholder="Nome completo"></div>
-        <div class="field"><label for="pixKey">Chave Pix</label><input id="pixKey" required maxlength="150" placeholder="CPF, e-mail, telefone ou chave aleatória"></div>
-        <div class="field"><label for="pixInstitution">Instituição</label><input id="pixInstitution" required maxlength="100" placeholder="Nome da instituição"></div>
-        <div class="field"><label for="pixAmount">Valor (R$)</label><input id="pixAmount" type="number" min="0.01" step="0.01" required inputmode="decimal" placeholder="0,00"></div>
-        <div class="field"><label for="pixDescription">Descrição (opcional)</label><textarea id="pixDescription" maxlength="180" placeholder="Ex.: divisão do jantar"></textarea></div>
+        <div class="field">
+          <label for="pixName">Nome completo do destinatário</label>
+          <input id="pixName" required maxlength="100" placeholder="Nome como aparece no banco">
+        </div>
+        <div class="field">
+          <label for="pixDoc">CPF ou CNPJ do destinatário</label>
+          <input id="pixDoc" required maxlength="20" inputmode="numeric" placeholder="000.000.000-00 ou 00.000.000/0000-00">
+          <span class="hint">Será usado para identificar a chave Pix</span>
+        </div>
+        <div class="field">
+          <label for="pixKey">Chave Pix</label>
+          <input id="pixKey" required maxlength="150" placeholder="CPF/CNPJ, e-mail, telefone ou chave aleatória">
+        </div>
+        <div class="field">
+          <label for="pixKeyType">Tipo da chave</label>
+          <select id="pixKeyType">
+            <option value="CPF">CPF</option>
+            <option value="CNPJ">CNPJ</option>
+            <option value="E-mail">E-mail</option>
+            <option value="Telefone">Telefone</option>
+            <option value="Aleatória">Chave aleatória</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="pixInstitution">Instituição financeira</label>
+          <input id="pixInstitution" required maxlength="100" placeholder="Nome do banco ou instituição">
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="pixAgency">Agência</label>
+            <input id="pixAgency" maxlength="10" inputmode="numeric" placeholder="0001">
+          </div>
+          <div class="field">
+            <label for="pixAccount">Conta</label>
+            <input id="pixAccount" maxlength="20" placeholder="00000-0">
+          </div>
+        </div>
+        <div class="field">
+          <label for="pixAmount">Valor (R$)</label>
+          <input id="pixAmount" type="number" min="0.01" step="0.01" required inputmode="decimal" placeholder="0,00">
+        </div>
+        <div class="field">
+          <label for="pixDescription">Descrição (opcional)</label>
+          <textarea id="pixDescription" maxlength="180" placeholder="Ex.: divisão do jantar"></textarea>
+        </div>
         <button class="button full" type="submit" style="margin-bottom:20px">Transferir</button>
       </form>
     </div>
@@ -222,8 +288,14 @@ nav{position:fixed;bottom:0;left:0;right:0;z-index:30;background:#0b0b0ff5;backd
     <h1>Depositar</h1>
     <div class="form-wrap">
       <form id="addForm">
-        <div class="field"><label for="addAmount">Valor (R$)</label><input id="addAmount" type="number" min="0.01" step="0.01" required inputmode="decimal" placeholder="0,00"></div>
-        <div class="field"><label for="addDescription">Descrição</label><input id="addDescription" maxlength="180" placeholder="Ex.: transferência recebida"></div>
+        <div class="field">
+          <label for="addAmount">Valor (R$)</label>
+          <input id="addAmount" type="number" min="0.01" step="0.01" required inputmode="decimal" placeholder="0,00">
+        </div>
+        <div class="field">
+          <label for="addDescription">Descrição</label>
+          <input id="addDescription" maxlength="180" placeholder="Ex.: transferência recebida">
+        </div>
         <button class="button full" type="submit" style="margin-bottom:20px">Depositar</button>
       </form>
     </div>
@@ -248,19 +320,17 @@ nav{position:fixed;bottom:0;left:0;right:0;z-index:30;background:#0b0b0ff5;backd
     <div class="pill-card" style="margin-top:16px">
       <div class="pill-icon"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M3 10h18"></path></svg></div>
       <div class="pill-text">Cartão virtual</div>
-      <div class="pill-right">0000</div>
+      <div class="pill-right" id="cardLastDigits">0000</div>
     </div>
-    <div style="margin:18px">
-      <div style="border-radius:18px;padding:24px;min-height:200px;background:linear-gradient(135deg,#820ad1,#51118e 65%,#28133e);box-shadow:0 14px 35px rgba(130,10,209,.35);display:flex;flex-direction:column;justify-content:space-between">
-        <div style="display:flex;justify-content:space-between;align-items:center">
-          <span style="font-size:22px;font-weight:800;letter-spacing:-1px;color:#fff">Nubank</span>
-          <div style="width:38px;height:28px;border-radius:6px;background:linear-gradient(135deg,#e8d8a4,#a88c55);border:1px solid #f2d9a0"></div>
-        </div>
-        <div style="font-size:19px;letter-spacing:3px;font-weight:600;color:#fff;margin:20px 0">0000 0000 0000 0000</div>
-        <div style="display:flex;justify-content:space-between;font-size:11px;color:#e0c8ff;text-transform:uppercase;letter-spacing:.5px">
-          <div>Titular<strong style="display:block;font-size:13px;color:#fff;margin-top:3px" id="cardHolder">USUÁRIO</strong></div>
-          <div style="text-align:right">Validade<strong style="display:block;font-size:13px;color:#fff;margin-top:3px">12/30</strong></div>
-        </div>
+    <div class="credit-card">
+      <div class="cc-top">
+        <span class="cc-brand">nu</span>
+        <div class="chip"></div>
+      </div>
+      <div class="cc-number" id="cardNumber">0000 0000 0000 0000</div>
+      <div class="cc-bottom">
+        <div>Titular<strong id="cardHolder">USUÁRIO</strong></div>
+        <div style="text-align:right">Validade<strong id="cardExpiry">12/30</strong></div>
       </div>
     </div>
     <div class="section-title">Limite disponível</div>
@@ -309,36 +379,66 @@ nav{position:fixed;bottom:0;left:0;right:0;z-index:30;background:#0b0b0ff5;backd
 
 <div class="toast" id="toast"></div>
 
-<div id="receiptOverlay" style="display:none;position:fixed;top:0;left:0;right:0;bottom:0;z-index:50;background:#fff;overflow-y:auto">
+<div id="receiptOverlay" style="display:none;position:fixed;top:0;left:0;right:0;bottom:0;z-index:50;background:#0b0b0f;overflow-y:auto">
   <div class="receipt-page">
     <button class="receipt-back" id="closeReceipt">← Voltar</button>
-    <div class="receipt-nu">nu</div>
+    <div class="receipt-logo">nu</div>
     <h1 class="receipt-h1" id="receiptTitle">Comprovante de pagamento</h1>
     <div class="receipt-date" id="receiptDate"></div>
-    <div class="rrow destaque"><span class="rlabel">Valor</span><span class="rvalue" id="receiptAmount">R$ 0,00</span></div>
-    <div class="rrow"><span class="rlabel">Documento</span><span class="rvalue" id="receiptDoc">—</span></div>
-    <div class="rrow"><span class="rlabel">Pagador</span><span class="rvalue" id="receiptPayer">—</span></div>
-    <div class="rrow"><span class="rlabel">Agência</span><span class="rvalue">0001</span></div>
-    <div class="rrow"><span class="rlabel">Conta</span><span class="rvalue">52048981-7</span></div>
+    <div class="receipt-status">
+      <svg viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"></path></svg>
+      <span id="receiptStatusTxt">Concluído</span>
+    </div>
+
+    <div class="rrow destaque">
+      <span class="rlabel">Valor</span>
+      <span class="rvalue" id="receiptAmount">R$ 0,00</span>
+    </div>
+
+    <div class="receipt-section">
+      <h3 class="receipt-section-title">Quem recebeu</h3>
+      <div class="rrow"><span class="rlabel">Nome</span><span class="rvalue" id="receiptReceiver">—</span></div>
+      <div class="rrow"><span class="rlabel">CPF/CNPJ</span><span class="rvalue" id="receiptDoc">—</span></div>
+      <div class="rrow"><span class="rlabel">Chave Pix</span><span class="rvalue" id="receiptKey">—</span></div>
+      <div class="rrow"><span class="rlabel">Tipo da chave</span><span class="rvalue" id="receiptKeyType">—</span></div>
+      <div class="rrow"><span class="rlabel">Instituição</span><span class="rvalue" id="receiptInst">—</span></div>
+      <div class="rrow"><span class="rlabel">Agência</span><span class="rvalue" id="receiptAgency">0001</span></div>
+      <div class="rrow"><span class="rlabel">Conta</span><span class="rvalue" id="receiptAccount">00000-0</span></div>
+    </div>
+
+    <div class="receipt-section">
+      <h3 class="receipt-section-title">Quem pagou</h3>
+      <div class="rrow"><span class="rlabel">Nome</span><span class="rvalue" id="receiptPayer">—</span></div>
+      <div class="rrow"><span class="rlabel">Instituição</span><span class="rvalue">NU Pagamentos S.A.</span></div>
+    </div>
+
+    <div class="receipt-section">
+      <h3 class="receipt-section-title">Sobre a transação</h3>
+      <div class="rrow"><span class="rlabel">Data</span><span class="rvalue" id="receiptDateFull">—</span></div>
+      <div class="rrow"><span class="rlabel">Horário</span><span class="rvalue" id="receiptTime">—</span></div>
+      <div class="rrow"><span class="rlabel">Descrição</span><span class="rvalue" id="receiptDesc">—</span></div>
+    </div>
+
     <div class="receipt-box">
       <span class="company">Nu Pagamentos S.A. - Instituição de Pagamento</span>
       <span class="cnpj-cut">CNPJ 18.236.120/0001-58</span>
       <span class="auth-title">Código de autenticação:</span>
       <span class="auth-code" id="receiptAuth">—</span>
       <span class="help-line">Estamos aqui para ajudar se você tiver alguma dúvida.</span>
-      <a class="help-link" href="#" onclick="return false">Me ajuda</a>
+      <a class="help-link" href="#" onclick="return false">Me ajuda →</a>
     </div>
+
     <div class="receipt-actions">
       <button id="saveReceipt">Salvar comprovante</button>
       <button class="light" onclick="window.print()">Imprimir / PDF</button>
     </div>
   </div>
-  </div>
+                                                                                                             </div>
 <script>
 (function(){
   'use strict';
 
-  var STORAGE_KEY = 'nubank_app_v4';
+  var STORAGE_KEY = 'nubank_app_v6';
   var INITIAL = { balance: 1250, transactions: [], profile: 'Pessoa Usuária' };
   var state = load();
   var balanceVisible = true;
@@ -351,11 +451,11 @@ nav{position:fixed;bottom:0;left:0;right:0;z-index:30;background:#0b0b0ff5;backd
       if(raw){
         var s = JSON.parse(raw);
         if(s && typeof s.balance === 'number' && Array.isArray(s.transactions)){
-          return { balance: s.balance, transactions: s.transactions, profile: s.profile || INITIAL.profile };
+          return { balance: s.balance, transactions: s.transactions, profile: s.profile || INITIAL.profile, cardNumber: s.cardNumber, cardExpiry: s.cardExpiry };
         }
       }
     }catch(e){}
-    return { balance: INITIAL.balance, transactions: [], profile: INITIAL.profile };
+    return { balance: INITIAL.balance, transactions: [], profile: INITIAL.profile, cardNumber: null, cardExpiry: null };
   }
   function save(){
     try{ localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); }
@@ -383,6 +483,9 @@ nav{position:fixed;bottom:0;left:0;right:0;z-index:30;background:#0b0b0ff5;backd
     var meses = ['JAN','FEV','MAR','ABR','MAI','JUN','JUL','AGO','SET','OUT','NOV','DEZ'];
     return String(d.getDate()).padStart(2,'0') + ' ' + meses[d.getMonth()] + ' ' + d.getFullYear();
   }
+  function fmtDateFull(d){
+    return new Intl.DateTimeFormat('pt-BR',{day:'2-digit',month:'2-digit',year:'numeric'}).format(d);
+  }
   function fmtTime(d){
     return new Intl.DateTimeFormat('pt-BR',{hour:'2-digit',minute:'2-digit',second:'2-digit'}).format(d);
   }
@@ -401,6 +504,45 @@ nav{position:fixed;bottom:0;left:0;right:0;z-index:30;background:#0b0b0ff5;backd
     return s;
   }
 
+  function fmtCPF(v){
+    var n = String(v).replace(/\D/g,'').slice(0,11);
+    if(n.length <= 3) return n;
+    if(n.length <= 6) return n.replace(/(\d{3})(\d+)/, '$1.$2');
+    if(n.length <= 9) return n.replace(/(\d{3})(\d{3})(\d+)/, '$1.$2.$3');
+    return n.replace(/(\d{3})(\d{3})(\d{3})(\d+)/, '$1.$2.$3-$4');
+  }
+  function fmtCNPJ(v){
+    var n = String(v).replace(/\D/g,'').slice(0,14);
+    if(n.length <= 2) return n;
+    if(n.length <= 5) return n.replace(/(\d{2})(\d+)/, '$1.$2');
+    if(n.length <= 8) return n.replace(/(\d{2})(\d{3})(\d+)/, '$1.$2.$3');
+    if(n.length <= 12) return n.replace(/(\d{2})(\d{3})(\d{3})(\d+)/, '$1.$2.$3/$4');
+    return n.replace(/(\d{2})(\d{3})(\d{3})(\d{4})(\d+)/, '$1.$2.$3/$4-$5');
+  }
+
+  function randomAgency(){
+    return String(Math.floor(Math.random()*9999)+1).padStart(4,'0');
+  }
+  function randomAccount(){
+    var num = Math.floor(Math.random()*9000000)+1000000;
+    var dv = Math.floor(Math.random()*10);
+    return num + '-' + dv;
+  }
+  function randomCardNumber(){
+    var parts = [];
+    for(var i=0;i<4;i++){
+      var p = '';
+      for(var j=0;j<4;j++) p += Math.floor(Math.random()*10);
+      parts.push(p);
+    }
+    return parts.join(' ');
+  }
+  function randomExpiry(){
+    var mes = String(Math.floor(Math.random()*12)+1).padStart(2,'0');
+    var ano = String(new Date().getFullYear() + Math.floor(Math.random()*4) + 2).slice(-2);
+    return mes + '/' + ano;
+  }
+
   function go(view){
     var views = document.querySelectorAll('.view');
     for(var i=0;i<views.length;i++){
@@ -412,6 +554,7 @@ nav{position:fixed;bottom:0;left:0;right:0;z-index:30;background:#0b0b0ff5;backd
     }
     if(view === 'home') renderHome();
     if(view === 'statement') renderStatement();
+    if(view === 'cards') renderCard();
     window.scrollTo(0,0);
   }
 
@@ -469,6 +612,21 @@ nav{position:fixed;bottom:0;left:0;right:0;z-index:30;background:#0b0b0ff5;backd
       : '<div class="empty">Sem movimentações para exibir.</div>';
   }
 
+  function renderCard(){
+    var numEl = document.getElementById('cardNumber');
+    var expEl = document.getElementById('cardExpiry');
+    var lastEl = document.getElementById('cardLastDigits');
+    if(!numEl) return;
+    if(!state.cardNumber){
+      state.cardNumber = randomCardNumber();
+      state.cardExpiry = randomExpiry();
+      save();
+    }
+    numEl.textContent = state.cardNumber;
+    if(expEl) expEl.textContent = state.cardExpiry;
+    if(lastEl) lastEl.textContent = state.cardNumber.slice(-4);
+  }
+
   function openReceipt(id){
     var t = null;
     for(var i=0;i<state.transactions.length;i++){
@@ -479,11 +637,29 @@ nav{position:fixed;bottom:0;left:0;right:0;z-index:30;background:#0b0b0ff5;backd
 
     var isCredit = t.type === 'credit';
     document.getElementById('receiptTitle').textContent = isCredit ? 'Comprovante de recebimento' : 'Comprovante de pagamento';
+    document.getElementById('receiptStatusTxt').textContent = 'Concluído';
     document.getElementById('receiptAmount').textContent = money(t.amount);
-    document.getElementById('receiptPayer').textContent = isCredit ? (t.title || 'Depósito') : (t.payer || state.profile);
-    document.getElementById('receiptDoc').textContent = isCredit ? 'Depósito em conta' : (t.description || 'Pix enviado');
     document.getElementById('receiptDate').textContent = t.date;
+    document.getElementById('receiptDateFull').textContent = t.date;
+    document.getElementById('receiptTime').textContent = t.time || '—';
+    document.getElementById('receiptDesc').textContent = t.description || (isCredit ? 'Depósito' : 'Pix enviado');
     document.getElementById('receiptAuth').textContent = t.auth || '—';
+
+    var secRecv = document.getElementById('receiptReceiver').closest('.receipt-section');
+    if(isCredit){
+      secRecv.style.display = 'none';
+      document.getElementById('receiptPayer').textContent = state.profile;
+    } else {
+      secRecv.style.display = '';
+      document.getElementById('receiptReceiver').textContent = t.recipient || '—';
+      document.getElementById('receiptDoc').textContent = t.doc || '—';
+      document.getElementById('receiptKey').textContent = t.pixKey || '—';
+      document.getElementById('receiptKeyType').textContent = t.keyType || '—';
+      document.getElementById('receiptInst').textContent = t.institution || '—';
+      document.getElementById('receiptAgency').textContent = t.agency || '0001';
+      document.getElementById('receiptAccount').textContent = t.account || '00000-0';
+      document.getElementById('receiptPayer').textContent = t.payer || state.profile;
+    }
 
     document.getElementById('receiptOverlay').style.display = 'block';
   }
@@ -508,15 +684,29 @@ nav{position:fixed;bottom:0;left:0;right:0;z-index:30;background:#0b0b0ff5;backd
 
   document.getElementById('closeReceipt').addEventListener('click', closeReceipt);
 
+  document.getElementById('pixDoc').addEventListener('input', function(e){
+    var v = e.target.value.replace(/\D/g,'');
+    e.target.value = v.length <= 11 ? fmtCPF(v) : fmtCNPJ(v);
+  });
+
+  document.getElementById('pixDoc').addEventListener('blur', function(e){
+    var keyField = document.getElementById('pixKey');
+    if(keyField && !keyField.value.trim()) keyField.value = e.target.value;
+  });
+
   document.getElementById('pixForm').addEventListener('submit', function(e){
     e.preventDefault();
     var name = document.getElementById('pixName').value.trim();
+    var doc = document.getElementById('pixDoc').value.trim();
     var key = document.getElementById('pixKey').value.trim();
+    var keyType = document.getElementById('pixKeyType').value;
     var inst = document.getElementById('pixInstitution').value.trim();
+    var agency = document.getElementById('pixAgency').value.trim() || randomAgency();
+    var account = document.getElementById('pixAccount').value.trim() || randomAccount();
     var amount = Math.round(Number(document.getElementById('pixAmount').value) * 100) / 100;
     var desc = document.getElementById('pixDescription').value.trim() || 'Pix enviado';
 
-    if(!name || !key || !inst){ toast('Preencha todos os campos.', true); return; }
+    if(!name || !doc || !key || !inst){ toast('Preencha todos os campos obrigatórios.', true); return; }
     if(!isFinite(amount) || amount <= 0){ toast('Informe um valor válido.', true); return; }
     if(amount > state.balance){ toast('Saldo insuficiente.', true); return; }
 
@@ -531,8 +721,12 @@ nav{position:fixed;bottom:0;left:0;right:0;z-index:30;background:#0b0b0ff5;backd
       date: fmtDate(now),
       time: fmtTime(now),
       recipient: name,
+      doc: doc,
       pixKey: key,
+      keyType: keyType,
       institution: inst,
+      agency: agency,
+      account: account,
       payer: state.profile,
       auth: fmtAuth()
     };
@@ -542,6 +736,7 @@ nav{position:fixed;bottom:0;left:0;right:0;z-index:30;background:#0b0b0ff5;backd
     save();
     lastReceipt = t;
     this.reset();
+    document.getElementById('pixPreview');
     renderHome();
     openReceipt(t.id);
     toast('Pix enviado com sucesso.');
@@ -562,6 +757,7 @@ nav{position:fixed;bottom:0;left:0;right:0;z-index:30;background:#0b0b0ff5;backd
       title: desc,
       subtitle: 'Crédito em conta',
       amount: amount,
+      description: desc,
       date: fmtDate(now),
       time: fmtTime(now),
       auth: fmtAuth()
@@ -584,10 +780,11 @@ nav{position:fixed;bottom:0;left:0;right:0;z-index:30;background:#0b0b0ff5;backd
 
   document.getElementById('resetBtn').addEventListener('click', function(){
     if(!confirm('Restaurar conta ao estado inicial?')) return;
-    state = { balance: INITIAL.balance, transactions: [], profile: INITIAL.profile };
+    state = { balance: INITIAL.balance, transactions: [], profile: INITIAL.profile, cardNumber: null, cardExpiry: null };
     save();
     renderHome();
     renderStatement();
+    renderCard();
     toast('Conta restaurada.');
   });
 
@@ -621,36 +818,51 @@ nav{position:fixed;bottom:0;left:0;right:0;z-index:30;background:#0b0b0ff5;backd
     if(!lastReceipt){ toast('Nenhum comprovante selecionado.', true); return; }
     var html = '<!DOCTYPE html><html lang="pt-BR"><head><meta charset="UTF-8">' +
       '<title>Comprovante</title>' +
-      '<style>body{font-family:Arial,sans-serif;padding:26px;color:#111}' +
-      '.nu{color:#820ad1;font-size:26px;font-weight:800;letter-spacing:-1.5px}' +
-      'h1{font-size:23px;font-weight:800;margin:12px 0 4px}' +
-      '.date{font-size:12px;color:#888;text-transform:uppercase;margin-bottom:26px}' +
-      '.row{display:flex;justify-content:space-between;gap:16px;padding:14px 0;font-size:14px;border-bottom:1px solid #eee}' +
-      '.row .l{color:#333;font-weight:600}.row .v{color:#666}' +
-      '.row.d .v{color:#111;font-weight:600}' +
-      '.box{background:#f5f5f7;border-radius:10px;padding:20px;margin-top:26px;font-size:12.5px;line-height:1.65;color:#555}' +
-      '.box .company{font-weight:600;color:#333;display:block}' +
-      '.box .cnpj{overflow:hidden;white-space:nowrap;width:170px;display:block}' +
-      '.box .auth{display:block;margin-top:14px;color:#333}' +
-      '.box .code{display:block;color:#333;word-break:break-all}' +
-      '.box .help{display:block;margin-top:14px;color:#777}' +
+      '<style>body{font-family:Arial,sans-serif;background:#0b0b0f;color:#fff;padding:26px;margin:0}' +
+      '.logo{display:inline-flex;align-items:center;justify-content:center;background:#820ad1;border-radius:10px;width:44px;height:44px;color:#fff;font-weight:900;font-size:22px;letter-spacing:-1.2px}' +
+      'h1{font-size:24px;font-weight:800;margin:12px 0 6px}' +
+      '.date{font-size:12px;color:#888;text-transform:uppercase;margin-bottom:12px}' +
+      '.status{display:inline-block;background:#153a2c;color:#36c98f;padding:5px 10px;border-radius:6px;font-size:11px;font-weight:700;margin-bottom:26px}' +
+      '.st{font-size:11px;font-weight:800;color:#820ad1;text-transform:uppercase;letter-spacing:1.2px;margin:22px 0 8px;padding-top:18px;border-top:1px solid #1a1a1f}' +
+      '.row{display:flex;justify-content:space-between;gap:16px;padding:15px 0;font-size:14px;border-bottom:1px solid #1a1a1f}' +
+      '.row .l{color:#8b8b93;flex:0 0 42%;font-size:13px}' +
+      '.row .v{color:#fff;text-align:right;flex:1;font-weight:500}' +
+      '.row.d .v{font-weight:700;font-size:16px}' +
+      '.box{background:#141418;border:1px solid #1f1f24;border-radius:12px;padding:20px;margin-top:26px;font-size:12.5px;line-height:1.7;color:#a8a8b0}' +
+      '.box .company{font-weight:600;color:#fff;display:block}' +
+      '.box .cnpj{overflow:hidden;white-space:nowrap;width:175px;display:block}' +
+      '.box .auth{display:block;margin-top:14px;color:#fff;font-weight:600}' +
+      '.box .code{display:block;color:#fff;word-break:break-all;font-family:ui-monospace,monospace;font-size:11.5px}' +
+      '.box .help{display:block;margin-top:14px;color:#7a7a82}' +
       '.box .link{color:#820ad1;font-weight:700;text-decoration:none;display:inline-block;margin-top:6px}' +
       '</style></head><body>' +
-      '<div class="nu">nu</div>' +
+      '<div class="logo">nu</div>' +
       '<h1>' + document.getElementById('receiptTitle').textContent + '</h1>' +
       '<div class="date">' + document.getElementById('receiptDate').textContent + '</div>' +
+      '<div class="status">Concluído</div>' +
       '<div class="row d"><span class="l">Valor</span><span class="v">' + document.getElementById('receiptAmount').textContent + '</span></div>' +
-      '<div class="row"><span class="l">Documento</span><span class="v">' + document.getElementById('receiptDoc').textContent + '</span></div>' +
-      '<div class="row"><span class="l">Pagador</span><span class="v">' + document.getElementById('receiptPayer').textContent + '</span></div>' +
-      '<div class="row"><span class="l">Agência</span><span class="v">0001</span></div>' +
-      '<div class="row"><span class="l">Conta</span><span class="v">52048981-7</span></div>' +
+      '<div class="st">Quem recebeu</div>' +
+      '<div class="row"><span class="l">Nome</span><span class="v">' + document.getElementById('receiptReceiver').textContent + '</span></div>' +
+      '<div class="row"><span class="l">CPF/CNPJ</span><span class="v">' + document.getElementById('receiptDoc').textContent + '</span></div>' +
+      '<div class="row"><span class="l">Chave Pix</span><span class="v">' + document.getElementById('receiptKey').textContent + '</span></div>' +
+      '<div class="row"><span class="l">Tipo da chave</span><span class="v">' + document.getElementById('receiptKeyType').textContent + '</span></div>' +
+      '<div class="row"><span class="l">Instituição</span><span class="v">' + document.getElementById('receiptInst').textContent + '</span></div>' +
+      '<div class="row"><span class="l">Agência</span><span class="v">' + document.getElementById('receiptAgency').textContent + '</span></div>' +
+      '<div class="row"><span class="l">Conta</span><span class="v">' + document.getElementById('receiptAccount').textContent + '</span></div>' +
+      '<div class="st">Quem pagou</div>' +
+      '<div class="row"><span class="l">Nome</span><span class="v">' + document.getElementById('receiptPayer').textContent + '</span></div>' +
+      '<div class="row"><span class="l">Instituição</span><span class="v">NU Pagamentos S.A.</span></div>' +
+      '<div class="st">Sobre a transação</div>' +
+      '<div class="row"><span class="l">Data</span><span class="v">' + document.getElementById('receiptDateFull').textContent + '</span></div>' +
+      '<div class="row"><span class="l">Horário</span><span class="v">' + document.getElementById('receiptTime').textContent + '</span></div>' +
+      '<div class="row"><span class="l">Descrição</span><span class="v">' + document.getElementById('receiptDesc').textContent + '</span></div>' +
       '<div class="box">' +
       '<span class="company">Nu Pagamentos S.A. - Instituição de Pagamento</span>' +
       '<span class="cnpj">CNPJ 18.236.120/0001-58</span>' +
       '<span class="auth">Código de autenticação:</span>' +
       '<span class="code">' + document.getElementById('receiptAuth').textContent + '</span>' +
       '<span class="help">Estamos aqui para ajudar se você tiver alguma dúvida.</span>' +
-      '<a class="link" href="#">Me ajuda</a>' +
+      '<a class="link" href="#">Me ajuda →</a>' +
       '</div></body></html>';
     var blob = new Blob([html], {type:'text/html;charset=utf-8'});
     var url = URL.createObjectURL(blob);
@@ -665,7 +877,6 @@ nav{position:fixed;bottom:0;left:0;right:0;z-index:30;background:#0b0b0ff5;backd
 
   renderHome();
   renderStatement();
+  renderCard();
 })();
-</script>
-</body>
-</html>
+</scri
