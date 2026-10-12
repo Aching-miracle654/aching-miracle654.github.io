@@ -13,12 +13,12 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
 button,input,select,textarea{font:inherit;color:inherit}
 button{cursor:pointer;border:0;background:none;padding:0}
 h1{font-size:22px;font-weight:700;margin:22px 20px 14px;letter-spacing:-.3px}
+h2{font-size:16px;font-weight:700;margin:0 0 12px}
 .app-header{background:var(--nu);padding:18px 20px 24px}
 .header-top{display:flex;align-items:center;justify-content:space-between;gap:14px}
 .header-left{display:flex;align-items:center;gap:12px}
-.avatar{width:52px;height:52px;border-radius:50%;background:rgba(255,255,255,.18);display:flex;align-items:center;justify-content:center;position:relative;cursor:pointer}
+.avatar{width:52px;height:52px;border-radius:50%;background:rgba(255,255,255,.18);display:flex;align-items:center;justify-content:center;cursor:pointer}
 .avatar svg{width:26px;height:26px;stroke:#fff;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-.avatar .dot{position:absolute;top:2px;right:2px;width:12px;height:12px;border-radius:50%;background:#fff;border:2px solid var(--nu)}
 .nu-logo{display:inline-flex;align-items:center;justify-content:center;background:#fff;border-radius:10px;width:40px;height:40px;color:#820ad1;font-weight:900;font-size:20px;letter-spacing:-1.2px;line-height:1}
 .header-icons{display:flex;gap:18px;align-items:center}
 .header-icons button{color:#fff;width:26px;height:26px;display:flex;align-items:center;justify-content:center}
@@ -28,8 +28,6 @@ main{max-width:820px;margin:0 auto;padding:0 0 30px}
 .account-block{padding:22px 20px 8px}
 .account-top{display:flex;align-items:center;justify-content:space-between;gap:10px}
 .account-label{font-size:15px;font-weight:500;color:#fff}
-.account-arrow{color:var(--muted);display:flex}
-.account-arrow svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round}
 .balance-big{font-size:26px;font-weight:600;letter-spacing:-.3px;margin:6px 0 0;overflow-wrap:anywhere}
 .actions-scroll{display:flex;gap:4px;overflow-x:auto;padding:22px 14px 8px;scrollbar-width:none}
 .actions-scroll::-webkit-scrollbar{display:none}
@@ -46,7 +44,6 @@ main{max-width:820px;margin:0 auto;padding:0 0 30px}
 .pill-card .pill-right{font-size:14px;color:#fff;font-weight:500}
 .banner{background:var(--pill);border-radius:16px;padding:18px 20px;margin:14px 18px;display:flex;align-items:center;gap:14px}
 .banner .banner-text{flex:1;font-size:13.5px;color:#fff;line-height:1.4}
-.banner .banner-icon{font-size:28px}
 .section-title{font-size:16px;font-weight:700;color:#fff;margin:26px 20px 12px;padding-top:12px;border-top:1px solid var(--border)}
 .limit-card{background:var(--card);border-radius:16px;padding:18px 20px;margin:0 18px 12px;border:1px solid var(--border)}
 .limit-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
@@ -110,32 +107,51 @@ nav{position:fixed;bottom:0;left:0;right:0;z-index:30;background:#0b0b0ff5;backd
 .toast{position:fixed;top:86px;left:50%;transform:translateX(-50%);z-index:60;background:#f5f1fa;color:#202027;padding:14px 20px;border-radius:12px;max-width:90%;box-shadow:0 12px 40px rgba(0,0,0,.5);font-size:13.5px;font-weight:600;display:none}
 .toast.show{display:block}
 .toast.error{background:#ffe3e5;color:#751a28}
-.receipt-page{max-width:620px;margin:0 auto;padding:24px 22px 60px;color:#fff}
-.receipt-back{background:#1a1a1e;border:1px solid #2a2a30;border-radius:10px;padding:10px 14px;font-weight:600;color:#fff;font-size:13px;margin-bottom:24px;cursor:pointer}
-.receipt-logo{display:inline-flex;align-items:center;justify-content:center;background:#820ad1;border-radius:10px;width:44px;height:44px;color:#fff;font-weight:900;font-size:22px;letter-spacing:-1.2px;margin:0 0 20px}
-.receipt-h1{font-size:24px;font-weight:800;color:#fff;margin:0 0 6px;letter-spacing:-.4px}
-.receipt-date{font-size:12px;color:#8b8b8b;margin:0 0 12px;text-transform:uppercase;letter-spacing:.5px}
-.receipt-status{display:inline-flex;align-items:center;gap:6px;background:#153a2c;color:var(--green);padding:5px 10px;border-radius:6px;font-size:11px;font-weight:700;margin-bottom:26px}
-.receipt-status svg{width:13px;height:13px;stroke:currentColor;fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
-.rrow{display:flex;justify-content:space-between;gap:16px;padding:15px 0;font-size:14px;border-bottom:1px solid #1a1a1f}
+/* INVESTIMENTOS */
+.invest-card{background:var(--pill);border-radius:16px;padding:18px 20px;margin:10px 18px;cursor:pointer;border:1px solid var(--border)}
+.invest-card .ic-top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:10px}
+.invest-card .ic-title{font-size:15px;font-weight:700;color:#fff}
+.invest-card .ic-rate{font-size:13px;color:var(--green);font-weight:700}
+.invest-card .ic-val{font-size:20px;font-weight:700;color:#fff;margin-top:6px}
+.invest-card .ic-sub{font-size:12px;color:var(--muted);margin-top:4px}
+.invest-list-item{display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--border);font-size:13px}
+.invest-list-item:last-child{border-bottom:0}
+.invest-list-item .l{color:var(--muted)}
+.invest-list-item .v{color:#fff;font-weight:600}
+/* QR SCANNER */
+.qr-modal{position:fixed;inset:0;z-index:70;background:#000;display:none;flex-direction:column}
+.qr-modal.open{display:flex}
+.qr-modal video{flex:1;object-fit:cover;width:100%;background:#000}
+.qr-modal .qr-bar{position:absolute;top:0;left:0;right:0;padding:16px 20px;background:linear-gradient(180deg,rgba(0,0,0,.8),transparent);display:flex;justify-content:space-between;align-items:center;color:#fff;z-index:2}
+.qr-modal .qr-bar button{color:#fff;font-size:15px;font-weight:600}
+.qr-modal .qr-bar .title{font-size:16px;font-weight:700}
+.qr-modal .qr-overlay{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:240px;height:240px;border:3px solid #fff;border-radius:20px;box-shadow:0 0 0 2000px rgba(0,0,0,.5);pointer-events:none;z-index:1}
+.qr-modal .qr-bottom{position:absolute;bottom:0;left:0;right:0;padding:24px 20px;background:linear-gradient(0deg,rgba(0,0,0,.85),transparent);text-align:center;color:#fff;font-size:13px;z-index:2}
+.qr-fallback{padding:20px;background:#0b0b0f;display:none}
+.qr-fallback.open{display:block}
+/* COMPROVANTE BRANCO FIEL AO NUBANK */
+.receipt-page{max-width:600px;margin:0 auto;padding:22px 22px 60px;color:#111;background:#fff;min-height:100vh;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif}
+.receipt-back{background:#f2f2f4;border:0;border-radius:10px;padding:11px 14px;font-weight:600;color:#333;font-size:13px;margin-bottom:26px;cursor:pointer}
+.receipt-logo{color:#820ad1;font-size:30px;font-weight:800;letter-spacing:-1.5px;margin:0 0 24px}
+.receipt-h1{font-size:25px;font-weight:800;color:#111;margin:0 0 6px;letter-spacing:-.5px}
+.receipt-date{font-size:12px;color:#8b8b8b;margin:0 0 30px;text-transform:uppercase;letter-spacing:.5px}
+.rrow{display:flex;justify-content:space-between;gap:16px;padding:15px 0;font-size:14.5px;border-bottom:1px solid #ececef}
 .rrow:last-of-type{border-bottom:0}
-.rrow .rlabel{color:#8b8b93;font-weight:500;flex:0 0 42%;font-size:13px}
-.rrow .rvalue{color:#fff;text-align:right;flex:1;overflow-wrap:anywhere;font-weight:500}
-.rrow.destaque{padding:20px 0;border-bottom:1px solid #1a1a1f}
-.rrow.destaque .rlabel{color:#fff;font-weight:600;font-size:14px}
-.rrow.destaque .rvalue{color:#fff;font-weight:700;font-size:16px}
-.receipt-section{margin-top:24px;padding-top:22px;border-top:1px solid #1a1a1f}
-.receipt-section-title{font-size:11px;font-weight:800;color:#820ad1;text-transform:uppercase;letter-spacing:1.2px;margin:0 0 14px}
-.receipt-box{background:#141418;border:1px solid #1f1f24;border-radius:12px;padding:20px;margin-top:26px;font-size:12.5px;line-height:1.7;color:#a8a8b0}
-.receipt-box .company{font-weight:600;color:#fff;display:block;margin-bottom:2px}
-.receipt-box .cnpj-cut{display:block;color:#a8a8b0;overflow:hidden;white-space:nowrap;width:175px}
-.receipt-box .auth-title{margin-top:16px;display:block;color:#fff;font-weight:600}
-.receipt-box .auth-code{display:block;color:#fff;word-break:break-all;font-family:ui-monospace,Menlo,monospace;font-size:11.5px}
-.receipt-box .help-line{margin-top:16px;display:block;color:#7a7a82}
+.rrow .rlabel{color:#333;font-weight:600;flex:0 0 36%}
+.rrow .rvalue{color:#7a7a82;text-align:right;flex:1;overflow-wrap:anywhere}
+.rrow.destaque .rvalue{color:#111;font-weight:700}
+.receipt-box{background:#f5f5f7;border-radius:10px;padding:22px;margin-top:28px;font-size:12.5px;line-height:1.7;color:#666}
+.receipt-box .company{font-weight:700;color:#333;display:block;margin-bottom:3px}
+.receipt-box .cnpj-cut{display:block;color:#666;overflow:hidden;white-space:nowrap;width:180px}
+.receipt-box .auth-title{margin-top:18px;display:block;color:#333;font-weight:700}
+.receipt-box .auth-code{display:block;color:#333;word-break:break-all;font-family:ui-monospace,Menlo,monospace;font-size:11.5px}
+.receipt-box .help-line{margin-top:18px;display:block;color:#888}
 .receipt-box .help-link{color:#820ad1;font-weight:700;text-decoration:none;margin-top:6px;display:inline-block}
 .receipt-actions{display:grid;gap:10px;margin-top:32px}
-.receipt-actions button{min-height:48px;border:0;border-radius:12px;background:#820ad1;color:#fff;font-weight:700;font-size:14px;cursor:pointer}
-.receipt-actions button.light{background:#1f1f24;color:#c98eff;border:1px solid #2f2f38}
+.receipt-actions button{min-height:50px;border:0;border-radius:12px;background:#820ad1;color:#fff;font-weight:700;font-size:14px;cursor:pointer}
+.receipt-actions button.light{background:#f0e5fa;color:#5c0a94}
+.receipt-section{margin-top:26px}
+.receipt-section-title{font-size:11px;font-weight:800;color:#820ad1;text-transform:uppercase;letter-spacing:1.2px;margin:0 0 8px}
 </style>
 </head><body>
 
@@ -144,7 +160,6 @@ nav{position:fixed;bottom:0;left:0;right:0;z-index:30;background:#0b0b0ff5;backd
     <div class="header-left">
       <div class="avatar" data-go="profile">
         <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4.3 3.5-7 8-7s8 2.7 8 7"></path></svg>
-        <span class="dot"></span>
       </div>
       <div class="nu-logo">nu</div>
     </div>
@@ -165,12 +180,10 @@ nav{position:fixed;bottom:0;left:0;right:0;z-index:30;background:#0b0b0ff5;backd
 
 <main>
 
+  <!-- HOME -->
   <section class="view active" id="view-home">
     <div class="account-block">
-      <div class="account-top">
-        <span class="account-label">Saldo em conta</span>
-        <span class="account-arrow"><svg viewBox="0 0 24 24"><path d="m9 6 6 6-6 6"></path></svg></span>
-      </div>
+      <div class="account-top"><span class="account-label">Saldo em conta</span></div>
       <div class="balance-big" id="balanceDisplay">R$ 1.250,00</div>
     </div>
 
@@ -179,26 +192,26 @@ nav{position:fixed;bottom:0;left:0;right:0;z-index:30;background:#0b0b0ff5;backd
         <span class="circle"><svg viewBox="0 0 24 24"><path d="M7 3H4v3M4 3l6 6M17 21h3v-3m0 3-6-6M21 7V4h-3m3 0-6 6M3 17v3h3m-3 0 6-6"></path></svg></span>
         <span>Área Pix e Transferir</span>
       </button>
-      <button class="action-circle" data-info="Em breve">
+      <button class="action-circle" data-go="pay">
         <span class="circle"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="12" rx="2"></rect><path d="M2 11h20M6 15h4"></path></svg></span>
         <span>Pagar</span>
       </button>
-      <button class="action-circle" data-info="Em breve">
+      <button class="action-circle" data-go="fgts">
         <span class="circle"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg></span>
         <span>Pegar emprestado</span>
         <span class="badge">FGTS</span>
       </button>
-      <button class="action-circle" data-info="Recarga de celular">
-        <span class="circle"><svg viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="2"></rect><path d="M11 18h2"></path></svg></span>
-        <span>Recarga de celular</span>
+      <button class="action-circle" data-go="add">
+        <span class="circle"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"></path></svg></span>
+        <span>Depositar</span>
       </button>
-      <button class="action-circle" data-info="Caixinhas">
+      <button class="action-circle" data-go="invest">
         <span class="circle"><svg viewBox="0 0 24 24"><path d="M3 10h18M5 6h14v14H5zM9 3v3M15 3v3"></path></svg></span>
         <span>Caixinhas</span>
       </button>
-      <button class="action-circle" data-info="Investir">
-        <span class="circle"><svg viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8"></path><path d="M14 7h7v7"></path></svg></span>
-        <span>Investir</span>
+      <button class="action-circle" data-go="carduse">
+        <span class="circle"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M3 10h18"></path></svg></span>
+        <span>Usar cartão</span>
       </button>
     </div>
 
@@ -208,9 +221,8 @@ nav{position:fixed;bottom:0;left:0;right:0;z-index:30;background:#0b0b0ff5;backd
       <div class="pill-right"></div>
     </div>
 
-    <div class="banner">
-      <div class="banner-text">Facilite seus planos futuros: guarde dinheiro nas Caixinhas</div>
-      <div class="banner-icon">💜</div>
+    <div class="banner" data-go="invest">
+      <div class="banner-text">Rendimento de até <strong style="color:#36c98f">1,9% ao mês</strong> nas Caixinhas. Comece a investir.</div>
     </div>
 
     <div class="section-title">Cartão para construir limite</div>
@@ -230,18 +242,22 @@ nav{position:fixed;bottom:0;left:0;right:0;z-index:30;background:#0b0b0ff5;backd
     <div id="recentTx"></div>
   </section>
 
+  <!-- PIX -->
   <section class="view" id="view-pix">
     <h1>Área Pix</h1>
     <div class="form-wrap">
+      <button class="button full" id="btnQrScan" style="margin-bottom:14px;background:#26262d">
+        <svg viewBox="0 0 24 24" style="width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><path d="M3 7V5a2 2 0 0 1 2-2h2M17 3h2a2 2 0 0 1 2 2v2M21 17v2a2 2 0 0 1-2 2h-2M7 21H5a2 2 0 0 1-2-2v-2M3 12h18"></path></svg>
+        Ler QR Code com a câmera
+      </button>
       <form id="pixForm">
         <div class="field">
           <label for="pixName">Nome completo do destinatário</label>
           <input id="pixName" required maxlength="100" placeholder="Nome como aparece no banco">
         </div>
         <div class="field">
-          <label for="pixDoc">CPF ou CNPJ do destinatário</label>
-          <input id="pixDoc" required maxlength="20" inputmode="numeric" placeholder="000.000.000-00 ou 00.000.000/0000-00">
-          <span class="hint">Será usado para identificar a chave Pix</span>
+          <label for="pixDoc">CPF ou CNPJ</label>
+          <input id="pixDoc" required maxlength="20" inputmode="numeric" placeholder="000.000.000-00">
         </div>
         <div class="field">
           <label for="pixKey">Chave Pix</label>
@@ -250,26 +266,18 @@ nav{position:fixed;bottom:0;left:0;right:0;z-index:30;background:#0b0b0ff5;backd
         <div class="field">
           <label for="pixKeyType">Tipo da chave</label>
           <select id="pixKeyType">
-            <option value="CPF">CPF</option>
-            <option value="CNPJ">CNPJ</option>
-            <option value="E-mail">E-mail</option>
-            <option value="Telefone">Telefone</option>
+            <option value="CPF">CPF</option><option value="CNPJ">CNPJ</option>
+            <option value="E-mail">E-mail</option><option value="Telefone">Telefone</option>
             <option value="Aleatória">Chave aleatória</option>
           </select>
         </div>
         <div class="field">
           <label for="pixInstitution">Instituição financeira</label>
-          <input id="pixInstitution" required maxlength="100" placeholder="Nome do banco ou instituição">
+          <input id="pixInstitution" required maxlength="100" placeholder="Nome do banco">
         </div>
         <div class="field-row">
-          <div class="field">
-            <label for="pixAgency">Agência</label>
-            <input id="pixAgency" maxlength="10" inputmode="numeric" placeholder="0001">
-          </div>
-          <div class="field">
-            <label for="pixAccount">Conta</label>
-            <input id="pixAccount" maxlength="20" placeholder="00000-0">
-          </div>
+          <div class="field"><label for="pixAgency">Agência</label><input id="pixAgency" maxlength="10" placeholder="0001"></div>
+          <div class="field"><label for="pixAccount">Conta</label><input id="pixAccount" maxlength="20" placeholder="00000-0"></div>
         </div>
         <div class="field">
           <label for="pixAmount">Valor (R$)</label>
@@ -284,6 +292,156 @@ nav{position:fixed;bottom:0;left:0;right:0;z-index:30;background:#0b0b0ff5;backd
     </div>
   </section>
 
+  <!-- PAGAR -->
+  <section class="view" id="view-pay">
+    <h1>Pagar</h1>
+    <div class="form-wrap">
+      <form id="payForm">
+        <div class="field">
+          <label for="payType">Tipo de pagamento</label>
+          <select id="payType">
+            <option value="Boleto">Boleto bancário</option>
+            <option value="Conta de consumo">Conta de consumo (luz, água, etc.)</option>
+            <option value="Tributo">Tributo / imposto</option>
+            <option value="Débito automático">Débito automático</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="payCode">Código de barras ou número</label>
+          <input id="payCode" required maxlength="60" inputmode="numeric" placeholder="Digite o código">
+        </div>
+        <div class="field">
+          <label for="payBeneficiary">Beneficiário</label>
+          <input id="payBeneficiary" required maxlength="100" placeholder="Nome do beneficiário">
+        </div>
+        <div class="field">
+          <label for="payDue">Vencimento</label>
+          <input id="payDue" type="date" required>
+        </div>
+        <div class="field">
+          <label for="payAmount">Valor (R$)</label>
+          <input id="payAmount" type="number" min="0.01" step="0.01" required inputmode="decimal" placeholder="0,00">
+        </div>
+        <button class="button full" type="submit" style="margin-bottom:20px">Pagar</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FGTS -->
+  <section class="view" id="view-fgts">
+    <h1>Antecipar FGTS</h1>
+    <div class="form-wrap">
+      <div class="pill-card" style="margin:0 0 18px 0">
+        <div class="pill-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg></div>
+        <div class="pill-text">
+          <div style="font-size:13px;color:#a3a3ad;font-weight:500">Saldo FGTS disponível</div>
+          <div style="font-size:20px;font-weight:700;margin-top:4px" id="fgtsSaldo">R$ 3.480,00</div>
+        </div>
+      </div>
+      <div class="section-title" style="margin-top:0;padding-top:0;border:0">Antecipe seu saque</div>
+      <p style="font-size:13.5px;color:#a3a3ad;line-height:1.6;margin:0 0 18px">Simule a antecipação do saque-aniversário do FGTS. Sujeito à análise.</p>
+      <form id="fgtsForm">
+        <div class="field">
+          <label for="fgtsAmount">Valor a antecipar (R$)</label>
+          <input id="fgtsAmount" type="number" min="100" step="0.01" required inputmode="decimal" placeholder="100,00" max="3480">
+        </div>
+        <div class="field">
+          <label for="fgtsParcelas">Parcelas</label>
+          <select id="fgtsParcelas">
+            <option value="12">12x com juros de 1,29% a.m.</option>
+            <option value="24">24x com juros de 1,39% a.m.</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="fgtsNome">Nome completo</label>
+          <input id="fgtsNome" required maxlength="100" placeholder="Seu nome completo">
+        </div>
+        <div class="field">
+          <label for="fgtsCpf">CPF</label>
+          <input id="fgtsCpf" required maxlength="20" inputmode="numeric" placeholder="000.000.000-00">
+        </div>
+        <button class="button full" type="submit" style="margin-bottom:20px">Solicitar antecipação</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- INVESTIR -->
+  <section class="view" id="view-invest">
+    <h1>Caixinhas</h1>
+    <div class="account-block" style="padding-top:0">
+      <div class="account-top"><span class="account-label">Total investido</span></div>
+      <div class="balance-big" id="investTotal">R$ 0,00</div>
+    </div>
+
+    <div class="invest-card" data-caixinha="1.5">
+      <div class="ic-top">
+        <div>
+          <div class="ic-title">Caixinha Renda Fixa</div>
+          <div class="ic-sub">Liquidez diária · Reserva</div>
+        </div>
+        <div class="ic-rate">1,5% a.m.</div>
+      </div>
+      <div class="ic-val" id="invest1Val">R$ 0,00</div>
+    </div>
+
+    <div class="invest-card" data-caixinha="1.9">
+      <div class="ic-top">
+        <div>
+          <div class="ic-title">Caixinha Turbo</div>
+          <div class="ic-sub">Rendimento maior · Longo prazo</div>
+        </div>
+        <div class="ic-rate">1,9% a.m.</div>
+      </div>
+      <div class="ic-val" id="invest2Val">R$ 0,00</div>
+    </div>
+
+    <div class="section-title">Histórico de rendimentos</div>
+    <div class="pill-card" style="margin:0 18px" id="investHistoryBox">
+      <div style="flex:1;font-size:13.5px;color:#a3a3ad;text-align:center">Nenhum rendimento registrado ainda.</div>
+    </div>
+  </section>
+
+  <!-- USAR CARTÃO -->
+  <section class="view" id="view-carduse">
+    <h1>Usar cartão</h1>
+    <div class="form-wrap">
+      <div class="pill-card" style="margin:0 0 18px 0">
+        <div class="pill-icon"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M3 10h18"></path></svg></div>
+        <div class="pill-text">
+          <div style="font-size:13px;color:#a3a3ad;font-weight:500">Limite disponível</div>
+          <div style="font-size:20px;font-weight:700;margin-top:4px">R$ 5.000,00</div>
+        </div>
+      </div>
+      <form id="cardUseForm">
+        <div class="field">
+          <label for="cuEstab">Estabelecimento</label>
+          <input id="cuEstab" required maxlength="80" placeholder="Ex.: Supermercado Extra">
+        </div>
+        <div class="field">
+          <label for="cuType">Tipo de compra</label>
+          <select id="cuType">
+            <option value="Compra à vista">Compra à vista</option>
+            <option value="Compra parcelada">Compra parcelada</option>
+            <option value="Assinatura">Assinatura</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="cuParcelas">Parcelas (se parcelado)</label>
+          <select id="cuParcelas">
+            <option value="1">1x</option><option value="2">2x</option><option value="3">3x</option>
+            <option value="6">6x</option><option value="12">12x</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="cuAmount">Valor (R$)</label>
+          <input id="cuAmount" type="number" min="0.01" step="0.01" required inputmode="decimal" placeholder="0,00">
+        </div>
+        <button class="button full" type="submit" style="margin-bottom:20px">Fazer compra</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- DEPOSITAR -->
   <section class="view" id="view-add">
     <h1>Depositar</h1>
     <div class="form-wrap">
@@ -301,12 +459,13 @@ nav{position:fixed;bottom:0;left:0;right:0;z-index:30;background:#0b0b0ff5;backd
     </div>
   </section>
 
+  <!-- EXTRATO -->
   <section class="view" id="view-statement">
     <h1>Extrato</h1>
     <div class="account-block" style="padding-top:0">
       <div class="account-top"><span class="account-label">Saldo atual</span></div>
       <div class="balance-big" id="statementBalance">R$ 1.250,00</div>
-      <div class="tx-sub" id="statementCount" style="margin-top:6px">0 movimentações</div>
+      <div class="tx-sub" id="statementCount" style="margin-top:6px;color:#a3a3ad">0 movimentações</div>
     </div>
     <div class="button-row" style="margin:16px 0 22px">
       <button class="button secondary" id="exportCsv">Exportar CSV</button>
@@ -315,13 +474,9 @@ nav{position:fixed;bottom:0;left:0;right:0;z-index:30;background:#0b0b0ff5;backd
     <div id="allTx"></div>
   </section>
 
+  <!-- CARTÕES -->
   <section class="view" id="view-cards">
     <h1>Meus cartões</h1>
-    <div class="pill-card" style="margin-top:16px">
-      <div class="pill-icon"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M3 10h18"></path></svg></div>
-      <div class="pill-text">Cartão virtual</div>
-      <div class="pill-right" id="cardLastDigits">0000</div>
-    </div>
     <div class="credit-card">
       <div class="cc-top">
         <span class="cc-brand">nu</span>
@@ -333,6 +488,14 @@ nav{position:fixed;bottom:0;left:0;right:0;z-index:30;background:#0b0b0ff5;backd
         <div style="text-align:right">Validade<strong id="cardExpiry">12/30</strong></div>
       </div>
     </div>
+    <div class="pill-card" data-info="Cartão bloqueado temporariamente">
+      <div class="pill-icon"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M3 10h18"></path></svg></div>
+      <div class="pill-text">Bloquear cartão</div>
+    </div>
+    <div class="pill-card" data-info="Fatura atual: R$ 0,00">
+      <div class="pill-icon"><svg viewBox="0 0 24 24"><path d="M5 4h14v16H5zM8 8h8M8 12h8"></path></svg></div>
+      <div class="pill-text">Ver fatura</div>
+    </div>
     <div class="section-title">Limite disponível</div>
     <div class="account-block" style="padding-top:6px">
       <div class="balance-big" style="font-size:24px">R$ 5.000,00</div>
@@ -340,15 +503,12 @@ nav{position:fixed;bottom:0;left:0;right:0;z-index:30;background:#0b0b0ff5;backd
     </div>
   </section>
 
+  <!-- PERFIL -->
   <section class="view" id="view-profile">
     <h1>Perfil</h1>
     <div class="menu-item" style="cursor:default">
       <div class="menu-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4.3 3.5-7 8-7s8 2.7 8 7"></path></svg></div>
       <div><div style="font-weight:700" id="profileDisplay">Pessoa Usuária</div><div class="tx-sub">Conta Nubank</div></div>
-    </div>
-    <div class="menu-item" style="cursor:default">
-      <div class="menu-icon"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V9l7-5 7 5v12M9 21v-6h6v6"></path></svg></div>
-      <div><div style="font-weight:700">NU Pagamentos S.A.</div><div class="tx-sub">Instituição de Pagamento</div></div>
     </div>
     <div class="form-wrap" style="margin-top:20px">
       <form id="profileForm">
@@ -379,71 +539,66 @@ nav{position:fixed;bottom:0;left:0;right:0;z-index:30;background:#0b0b0ff5;backd
 
 <div class="toast" id="toast"></div>
 
-<div id="receiptOverlay" style="display:none;position:fixed;top:0;left:0;right:0;bottom:0;z-index:50;background:#0b0b0f;overflow-y:auto">
+<!-- QR SCANNER -->
+<div class="qr-modal" id="qrModal">
+  <div class="qr-bar">
+    <button id="qrClose">✕ Fechar</button>
+    <span class="title">Ler QR Code</span>
+    <span style="width:60px"></span>
+  </div>
+  <video id="qrVideo" playsinline autoplay muted></video>
+  <div class="qr-overlay"></div>
+  <div class="qr-bottom">Aponte a câmera para o QR Code de um Pix</div>
+</div>
+
+<!-- COMPROVANTE BRANCO -->
+<div id="receiptOverlay" style="display:none;position:fixed;top:0;left:0;right:0;bottom:0;z-index:50;background:#fff;overflow-y:auto">
   <div class="receipt-page">
     <button class="receipt-back" id="closeReceipt">← Voltar</button>
     <div class="receipt-logo">nu</div>
-    <h1 class="receipt-h1" id="receiptTitle">Comprovante de pagamento</h1>
+    <div class="receipt-h1" id="receiptTitle">Comprovante de pagamento</div>
     <div class="receipt-date" id="receiptDate"></div>
-    <div class="receipt-status">
-      <svg viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"></path></svg>
-      <span id="receiptStatusTxt">Concluído</span>
-    </div>
 
-    <div class="rrow destaque">
-      <span class="rlabel">Valor</span>
-      <span class="rvalue" id="receiptAmount">R$ 0,00</span>
-    </div>
+    <div class="rrow destaque"><span class="rlabel">Valor</span><span class="rvalue" id="receiptAmount">R$ 0,00</span></div>
+    <div class="rrow"><span class="rlabel">Tipo</span><span class="rvalue" id="receiptType">—</span></div>
 
     <div class="receipt-section">
       <h3 class="receipt-section-title">Quem recebeu</h3>
       <div class="rrow"><span class="rlabel">Nome</span><span class="rvalue" id="receiptReceiver">—</span></div>
       <div class="rrow"><span class="rlabel">CPF/CNPJ</span><span class="rvalue" id="receiptDoc">—</span></div>
       <div class="rrow"><span class="rlabel">Chave Pix</span><span class="rvalue" id="receiptKey">—</span></div>
-      <div class="rrow"><span class="rlabel">Tipo da chave</span><span class="rvalue" id="receiptKeyType">—</span></div>
       <div class="rrow"><span class="rlabel">Instituição</span><span class="rvalue" id="receiptInst">—</span></div>
-      <div class="rrow"><span class="rlabel">Agência</span><span class="rvalue" id="receiptAgency">0001</span></div>
-      <div class="rrow"><span class="rlabel">Conta</span><span class="rvalue" id="receiptAccount">00000-0</span></div>
+      <div class="rrow"><span class="rlabel">Agência</span><span class="rvalue" id="receiptAgency">—</span></div>
+      <div class="rrow"><span class="rlabel">Conta</span><span class="rvalue" id="receiptAccount">—</span></div>
     </div>
 
     <div class="receipt-section">
       <h3 class="receipt-section-title">Quem pagou</h3>
-      <div class="rrow"><span class="rlabel">Nome</span><span class="rvalue" id="receiptPayer">—</span></div>
-      <div class="rrow"><span class="rlabel">Instituição</span><span class="rvalue">NU Pagamentos S.A.</span></div>
-    </div>
-
-    <div class="receipt-section">
-      <h3 class="receipt-section-title">Sobre a transação</h3>
-      <div class="rrow"><span class="rlabel">Data</span><span class="rvalue" id="receiptDateFull">—</span></div>
-      <div class="rrow"><span class="rlabel">Horário</span><span class="rvalue" id="receiptTime">—</span></div>
-      <div class="rrow"><span class="rlabel">Descrição</span><span class="rvalue" id="receiptDesc">—</span></div>
-    </div>
-
-    <div class="receipt-box">
-      <span class="company">Nu Pagamentos S.A. - Instituição de Pagamento</span>
-      <span class="cnpj-cut">CNPJ 18.236.120/0001-58</span>
-      <span class="auth-title">Código de autenticação:</span>
-      <span class="auth-code" id="receiptAuth">—</span>
-      <span class="help-line">Estamos aqui para ajudar se você tiver alguma dúvida.</span>
-      <a class="help-link" href="#" onclick="return false">Me ajuda →</a>
-    </div>
-
-    <div class="receipt-actions">
-      <button id="saveReceipt">Salvar comprovante</button>
-      <button class="light" onclick="window.print()">Imprimir / PDF</button>
-    </div>
-  </div>
-                                                                                                             </div>
+      <div class="rrow"><span class="rlabel">Nome</s
 <script>
 (function(){
   'use strict';
 
-  var STORAGE_KEY = 'nubank_app_v6';
-  var INITIAL = { balance: 1250, transactions: [], profile: 'Pessoa Usuária' };
+  var STORAGE_KEY = 'nubank_app_v7';
+  var INITIAL = {
+    balance: 1250,
+    transactions: [],
+    profile: 'Pessoa Usuária',
+    cardNumber: null,
+    cardExpiry: null,
+    fgtsSaldo: 3480,
+    fgtsAntecipado: 0,
+    invest1: 0,
+    invest2: 0,
+    investHistory: [],
+    lastInvestDate: null
+  };
   var state = load();
   var balanceVisible = true;
   var lastReceipt = null;
   var toastTimer;
+  var qrStream = null;
+  var qrScanTimer = null;
 
   function load(){
     try{
@@ -451,11 +606,14 @@ nav{position:fixed;bottom:0;left:0;right:0;z-index:30;background:#0b0b0ff5;backd
       if(raw){
         var s = JSON.parse(raw);
         if(s && typeof s.balance === 'number' && Array.isArray(s.transactions)){
-          return { balance: s.balance, transactions: s.transactions, profile: s.profile || INITIAL.profile, cardNumber: s.cardNumber, cardExpiry: s.cardExpiry };
+          for(var k in INITIAL){ if(!(k in s)) s[k] = INITIAL[k]; }
+          return s;
         }
       }
     }catch(e){}
-    return { balance: INITIAL.balance, transactions: [], profile: INITIAL.profile, cardNumber: null, cardExpiry: null };
+    var c = {};
+    for(var kk in INITIAL) c[kk] = Array.isArray(INITIAL[kk]) ? [] : INITIAL[kk];
+    return c;
   }
   function save(){
     try{ localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); }
@@ -474,36 +632,22 @@ nav{position:fixed;bottom:0;left:0;right:0;z-index:30;background:#0b0b0ff5;backd
     el.classList.toggle('error', !!error);
     el.classList.add('show');
     clearTimeout(toastTimer);
-    toastTimer = setTimeout(function(){ el.classList.remove('show'); }, 2600);
+    toastTimer = setTimeout(function(){ el.classList.remove('show'); }, 2800);
   }
-  function newId(){
-    return Date.now().toString(36) + Math.random().toString(36).slice(2,6);
-  }
-  function fmtDate(d){
-    var meses = ['JAN','FEV','MAR','ABR','MAI','JUN','JUL','AGO','SET','OUT','NOV','DEZ'];
-    return String(d.getDate()).padStart(2,'0') + ' ' + meses[d.getMonth()] + ' ' + d.getFullYear();
-  }
-  function fmtDateFull(d){
-    return new Intl.DateTimeFormat('pt-BR',{day:'2-digit',month:'2-digit',year:'numeric'}).format(d);
-  }
-  function fmtTime(d){
-    return new Intl.DateTimeFormat('pt-BR',{hour:'2-digit',minute:'2-digit',second:'2-digit'}).format(d);
-  }
+  function newId(){ return Date.now().toString(36) + Math.random().toString(36).slice(2,6); }
+  var MESES = ['JAN','FEV','MAR','ABR','MAI','JUN','JUL','AGO','SET','OUT','NOV','DEZ'];
+  function fmtDate(d){ return String(d.getDate()).padStart(2,'0') + ' ' + MESES[d.getMonth()] + ' ' + d.getFullYear(); }
+  function fmtDateFull(d){ return new Intl.DateTimeFormat('pt-BR',{day:'2-digit',month:'2-digit',year:'numeric'}).format(d); }
+  function fmtTime(d){ return new Intl.DateTimeFormat('pt-BR',{hour:'2-digit',minute:'2-digit',second:'2-digit'}).format(d); }
   function fmtAuth(){
-    var hex = '0123456789abcdef';
-    var s = '';
-    for(var i=0;i<8;i++) s += hex[Math.floor(Math.random()*16)];
-    s += '-';
-    for(var j=0;j<4;j++) s += hex[Math.floor(Math.random()*16)];
-    s += '-';
-    for(var k=0;k<4;k++) s += hex[Math.floor(Math.random()*16)];
-    s += '-';
-    for(var l=0;l<4;l++) s += hex[Math.floor(Math.random()*16)];
-    s += '-';
+    var hex = '0123456789abcdef'; var s = '';
+    for(var i=0;i<8;i++) s += hex[Math.floor(Math.random()*16)]; s += '-';
+    for(var j=0;j<4;j++) s += hex[Math.floor(Math.random()*16)]; s += '-';
+    for(var k=0;k<4;k++) s += hex[Math.floor(Math.random()*16)]; s += '-';
+    for(var l=0;l<4;l++) s += hex[Math.floor(Math.random()*16)]; s += '-';
     for(var m=0;m<12;m++) s += hex[Math.floor(Math.random()*16)];
     return s;
   }
-
   function fmtCPF(v){
     var n = String(v).replace(/\D/g,'').slice(0,11);
     if(n.length <= 3) return n;
@@ -516,25 +660,14 @@ nav{position:fixed;bottom:0;left:0;right:0;z-index:30;background:#0b0b0ff5;backd
     if(n.length <= 2) return n;
     if(n.length <= 5) return n.replace(/(\d{2})(\d+)/, '$1.$2');
     if(n.length <= 8) return n.replace(/(\d{2})(\d{3})(\d+)/, '$1.$2.$3');
-    if(n.length <= 12) return n.replace(/(\d{2})(\d{3})(\d{3})(\d+)/, '$1.$2.$3/$4');
+    if(n.length <= 12) return n.replace(/(\d{2})(\d{3})(\d{3})(\d+)/, '$1/$2$3$4'.replace('$1/$2$3$4','$1.$2.$3/$4'));
     return n.replace(/(\d{2})(\d{3})(\d{3})(\d{4})(\d+)/, '$1.$2.$3/$4-$5');
   }
-
-  function randomAgency(){
-    return String(Math.floor(Math.random()*9999)+1).padStart(4,'0');
-  }
-  function randomAccount(){
-    var num = Math.floor(Math.random()*9000000)+1000000;
-    var dv = Math.floor(Math.random()*10);
-    return num + '-' + dv;
-  }
+  function randomAgency(){ return String(Math.floor(Math.random()*9999)+1).padStart(4,'0'); }
+  function randomAccount(){ return (Math.floor(Math.random()*9000000)+1000000) + '-' + Math.floor(Math.random()*10); }
   function randomCardNumber(){
     var parts = [];
-    for(var i=0;i<4;i++){
-      var p = '';
-      for(var j=0;j<4;j++) p += Math.floor(Math.random()*10);
-      parts.push(p);
-    }
+    for(var i=0;i<4;i++){ var p=''; for(var j=0;j<4;j++) p += Math.floor(Math.random()*10); parts.push(p); }
     return parts.join(' ');
   }
   function randomExpiry(){
@@ -543,6 +676,7 @@ nav{position:fixed;bottom:0;left:0;right:0;z-index:30;background:#0b0b0ff5;backd
     return mes + '/' + ano;
   }
 
+  /* NAVEGAÇÃO */
   function go(view){
     var views = document.querySelectorAll('.view');
     for(var i=0;i<views.length;i++){
@@ -555,9 +689,11 @@ nav{position:fixed;bottom:0;left:0;right:0;z-index:30;background:#0b0b0ff5;backd
     if(view === 'home') renderHome();
     if(view === 'statement') renderStatement();
     if(view === 'cards') renderCard();
+    if(view === 'invest') renderInvest();
     window.scrollTo(0,0);
   }
 
+  /* RENDER HOME */
   function renderBalance(){
     var txt = balanceVisible ? money(state.balance) : '••••••';
     var el = document.getElementById('balanceDisplay');
@@ -578,15 +714,14 @@ nav{position:fixed;bottom:0;left:0;right:0;z-index:30;background:#0b0b0ff5;backd
       '<div class="tx-info">' +
         '<div class="tx-title">' + esc(t.title) + '</div>' +
         '<div class="tx-sub">' + esc(t.date) + ' · ' + esc(t.subtitle || '') + '</div>' +
-        (t.recipient ? '<div class="tx-btn" data-receipt="' + esc(t.id) + '">Ver comprovante ›</div>' : '') +
+        (t.hasReceipt ? '<div class="tx-btn" data-receipt="' + esc(t.id) + '">Ver comprovante ›</div>' : '') +
       '</div>' +
       '<div class="tx-amount ' + cls + '">' + sign + money(t.amount) + '</div>' +
     '</div>';
   }
 
   function renderHome(){
-    var g = document.getElementById('greeting');
-    if(g) g.textContent = 'Olá, ' + state.profile.split(' ')[0];
+    document.getElementById('greeting').textContent = 'Olá, ' + state.profile.split(' ')[0];
     var ch = document.getElementById('cardHolder');
     if(ch) ch.textContent = state.profile.toUpperCase();
     var pd = document.getElementById('profileDisplay');
@@ -594,28 +729,20 @@ nav{position:fixed;bottom:0;left:0;right:0;z-index:30;background:#0b0b0ff5;backd
     var pn = document.getElementById('profileName');
     if(pn) pn.value = state.profile;
     renderBalance();
-
     var recent = state.transactions.slice(0,3);
     var box = document.getElementById('recentTx');
-    if(box) box.innerHTML = recent.length
-      ? recent.map(txHTML).join('')
-      : '<div class="empty">Nenhuma movimentação por aqui ainda.</div>';
+    box.innerHTML = recent.length ? recent.map(txHTML).join('') : '<div class="empty">Nenhuma movimentação por aqui ainda.</div>';
   }
 
   function renderStatement(){
     renderBalance();
-    var sc = document.getElementById('statementCount');
-    if(sc) sc.textContent = state.transactions.length + (state.transactions.length === 1 ? ' movimentação' : ' movimentações');
+    document.getElementById('statementCount').textContent = state.transactions.length + (state.transactions.length === 1 ? ' movimentação' : ' movimentações');
     var box = document.getElementById('allTx');
-    if(box) box.innerHTML = state.transactions.length
-      ? state.transactions.map(txHTML).join('')
-      : '<div class="empty">Sem movimentações para exibir.</div>';
+    box.innerHTML = state.transactions.length ? state.transactions.map(txHTML).join('') : '<div class="empty">Sem movimentações para exibir.</div>';
   }
 
   function renderCard(){
     var numEl = document.getElementById('cardNumber');
-    var expEl = document.getElementById('cardExpiry');
-    var lastEl = document.getElementById('cardLastDigits');
     if(!numEl) return;
     if(!state.cardNumber){
       state.cardNumber = randomCardNumber();
@@ -623,10 +750,47 @@ nav{position:fixed;bottom:0;left:0;right:0;z-index:30;background:#0b0b0ff5;backd
       save();
     }
     numEl.textContent = state.cardNumber;
-    if(expEl) expEl.textContent = state.cardExpiry;
-    if(lastEl) lastEl.textContent = state.cardNumber.slice(-4);
+    document.getElementById('cardExpiry').textContent = state.cardExpiry;
   }
 
+  function renderInvest(){
+    document.getElementById('investTotal').textContent = money(state.invest1 + state.invest2);
+    document.getElementById('invest1Val').textContent = money(state.invest1);
+    document.getElementById('invest2Val').textContent = money(state.invest2);
+    var hist = document.getElementById('investHistoryBox');
+    if(!state.investHistory.length){
+      hist.innerHTML = '<div style="flex:1;font-size:13.5px;color:#a3a3ad;text-align:center">Nenhum rendimento registrado ainda.</div>';
+    } else {
+      var rows = state.investHistory.slice(0,8).map(function(h){
+        return '<div class="invest-list-item"><span class="l">' + esc(h.date) + '</span><span class="v">+' + money(h.value) + '</span></div>';
+      }).join('');
+      hist.innerHTML = '<div style="width:100%">' + rows + '</div>';
+    }
+  }
+
+  /* APLICAR RENDIMENTO DIÁRIO (taxa mensal convertida pra diária aproximada) */
+  function aplicarRendimento(){
+    var hoje = new Date().toISOString().slice(0,10);
+    if(state.lastInvestDate === hoje) return;
+    if(state.invest1 > 0 || state.invest2 > 0){
+      // Taxa mensal -> diária: (1+taxa)^(1/30) - 1
+      var tx1 = Math.pow(1 + 0.015, 1/30) - 1;
+      var tx2 = Math.pow(1 + 0.019, 1/30) - 1;
+      var r1 = Math.round(state.invest1 * tx1 * 100) / 100;
+      var r2 = Math.round(state.invest2 * tx2 * 100) / 100;
+      var totalRend = Math.round((r1 + r2) * 100) / 100;
+      if(totalRend > 0){
+        state.invest1 = Math.round((state.invest1 + r1) * 100) / 100;
+        state.invest2 = Math.round((state.invest2 + r2) * 100) / 100;
+        state.investHistory.unshift({ date: fmtDate(new Date()), value: totalRend });
+        if(state.investHistory.length > 30) state.investHistory.length = 30;
+      }
+    }
+    state.lastInvestDate = hoje;
+    save();
+  }
+
+  /* COMPROVANTE */
   function openReceipt(id){
     var t = null;
     for(var i=0;i<state.transactions.length;i++){
@@ -635,65 +799,65 @@ nav{position:fixed;bottom:0;left:0;right:0;z-index:30;background:#0b0b0ff5;backd
     if(!t){ toast('Comprovante não encontrado.', true); return; }
     lastReceipt = t;
 
-    var isCredit = t.type === 'credit';
-    document.getElementById('receiptTitle').textContent = isCredit ? 'Comprovante de recebimento' : 'Comprovante de pagamento';
-    document.getElementById('receiptStatusTxt').textContent = 'Concluído';
+    document.getElementById('receiptTitle').textContent = t.type === 'credit' ? 'Comprovante de recebimento' : 'Comprovante de pagamento';
     document.getElementById('receiptAmount').textContent = money(t.amount);
+    document.getElementById('receiptType').textContent = t.title;
     document.getElementById('receiptDate').textContent = t.date;
     document.getElementById('receiptDateFull').textContent = t.date;
     document.getElementById('receiptTime').textContent = t.time || '—';
-    document.getElementById('receiptDesc').textContent = t.description || (isCredit ? 'Depósito' : 'Pix enviado');
+    document.getElementById('receiptDesc').textContent = t.description || t.title;
     document.getElementById('receiptAuth').textContent = t.auth || '—';
 
     var secRecv = document.getElementById('receiptReceiver').closest('.receipt-section');
-    if(isCredit){
+    if(t.type === 'credit'){
       secRecv.style.display = 'none';
-      document.getElementById('receiptPayer').textContent = state.profile;
     } else {
       secRecv.style.display = '';
       document.getElementById('receiptReceiver').textContent = t.recipient || '—';
       document.getElementById('receiptDoc').textContent = t.doc || '—';
       document.getElementById('receiptKey').textContent = t.pixKey || '—';
-      document.getElementById('receiptKeyType').textContent = t.keyType || '—';
       document.getElementById('receiptInst').textContent = t.institution || '—';
-      document.getElementById('receiptAgency').textContent = t.agency || '0001';
-      document.getElementById('receiptAccount').textContent = t.account || '00000-0';
-      document.getElementById('receiptPayer').textContent = t.payer || state.profile;
+      document.getElementById('receiptAgency').textContent = t.agency || '—';
+      document.getElementById('receiptAccount').textContent = t.account || '—';
     }
+    document.getElementById('receiptPayer').textContent = t.payer || state.profile;
 
     document.getElementById('receiptOverlay').style.display = 'block';
+    document.getElementById('receiptOverlay').scrollTop = 0;
   }
+  function closeReceipt(){ document.getElementById('receiptOverlay').style.display = 'none'; }
 
-  function closeReceipt(){
-    document.getElementById('receiptOverlay').style.display = 'none';
-  }
-
+  /* CLICK DELEGADO */
   document.addEventListener('click', function(e){
     var el = e.target.closest('[data-go]');
     if(el){ go(el.getAttribute('data-go')); return; }
     var rec = e.target.closest('[data-receipt]');
     if(rec){ openReceipt(rec.getAttribute('data-receipt')); return; }
+    var cx = e.target.closest('[data-caixinha]');
+    if(cx){ investirCaixinha(parseFloat(cx.getAttribute('data-caixinha'))); return; }
     var info = e.target.closest('[data-info]');
     if(info){ toast(info.getAttribute('data-info')); return; }
   });
 
   document.getElementById('toggleBalance').addEventListener('click', function(){
-    balanceVisible = !balanceVisible;
-    renderBalance();
+    balanceVisible = !balanceVisible; renderBalance();
   });
-
   document.getElementById('closeReceipt').addEventListener('click', closeReceipt);
 
+  /* MÁSCARA CPF/CNPJ */
   document.getElementById('pixDoc').addEventListener('input', function(e){
     var v = e.target.value.replace(/\D/g,'');
     e.target.value = v.length <= 11 ? fmtCPF(v) : fmtCNPJ(v);
   });
-
   document.getElementById('pixDoc').addEventListener('blur', function(e){
-    var keyField = document.getElementById('pixKey');
-    if(keyField && !keyField.value.trim()) keyField.value = e.target.value;
+    var kf = document.getElementById('pixKey');
+    if(kf && !kf.value.trim()) kf.value = e.target.value;
+  });
+  document.getElementById('fgtsCpf').addEventListener('input', function(e){
+    e.target.value = fmtCPF(e.target.value);
   });
 
+  /* PIX */
   document.getElementById('pixForm').addEventListener('submit', function(e){
     e.preventDefault();
     var name = document.getElementById('pixName').value.trim();
@@ -712,55 +876,151 @@ nav{position:fixed;bottom:0;left:0;right:0;z-index:30;background:#0b0b0ff5;backd
 
     var now = new Date();
     var t = {
-      id: newId(),
-      type: 'debit',
-      title: 'Pix enviado',
-      subtitle: name,
-      amount: amount,
-      description: desc,
-      date: fmtDate(now),
-      time: fmtTime(now),
-      recipient: name,
-      doc: doc,
-      pixKey: key,
-      keyType: keyType,
-      institution: inst,
-      agency: agency,
-      account: account,
-      payer: state.profile,
-      auth: fmtAuth()
+      id: newId(), type: 'debit', title: 'Pix enviado', subtitle: name,
+      amount: amount, description: desc, date: fmtDate(now), time: fmtTime(now),
+      recipient: name, doc: doc, pixKey: key, keyType: keyType, institution: inst,
+      agency: agency, account: account, payer: state.profile, auth: fmtAuth(), hasReceipt: true
     };
 
     state.balance = Math.round((state.balance - amount) * 100) / 100;
     state.transactions.unshift(t);
     save();
-    lastReceipt = t;
     this.reset();
-    document.getElementById('pixPreview');
     renderHome();
     openReceipt(t.id);
     toast('Pix enviado com sucesso.');
   });
 
+  /* PAGAR */
+  document.getElementById('payForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    var type = document.getElementById('payType').value;
+    var code = document.getElementById('payCode').value.trim();
+    var benef = document.getElementById('payBeneficiary').value.trim();
+    var due = document.getElementById('payDue').value;
+    var amount = Math.round(Number(document.getElementById('payAmount').value) * 100) / 100;
+
+    if(!code || !benef || !due){ toast('Preencha todos os campos.', true); return; }
+    if(!isFinite(amount) || amount <= 0){ toast('Valor inválido.', true); return; }
+    if(amount > state.balance){ toast('Saldo insuficiente.', true); return; }
+
+    var now = new Date();
+    var t = {
+      id: newId(), type: 'debit', title: 'Pagamento',
+      subtitle: benef + ' · ' + type,
+      amount: amount, description: type + ' · ' + benef,
+      date: fmtDate(now), time: fmtTime(now),
+      recipient: benef, doc: '—', pixKey: code, keyType: type,
+      institution: 'Pagamento de ' + type,
+      agency: randomAgency(), account: randomAccount(),
+      payer: state.profile, auth: fmtAuth(), hasReceipt: true
+    };
+
+    state.balance = Math.round((state.balance - amount) * 100) / 100;
+    state.transactions.unshift(t);
+    save();
+    this.reset();
+    renderHome();
+    openReceipt(t.id);
+    toast('Pagamento realizado.');
+  });
+
+  /* FGTS */
+  document.getElementById('fgtsForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    var amount = Math.round(Number(document.getElementById('fgtsAmount').value) * 100) / 100;
+    var parcelas = document.getElementById('fgtsParcelas').value;
+    var nome = document.getElementById('fgtsNome').value.trim();
+    var cpf = document.getElementById('fgtsCpf').value.trim();
+
+    if(!nome || !cpf){ toast('Preencha nome e CPF.', true); return; }
+    if(!isFinite(amount) || amount < 100){ toast('Valor mínimo: R$ 100,00.', true); return; }
+    if(amount > state.fgtsSaldo - state.fgtsAntecipado){ toast('Valor maior que o saldo disponível.', true); return; }
+
+    var now = new Date();
+    state.balance = Math.round((state.balance + amount) * 100) / 100;
+    state.fgtsAntecipado = Math.round((state.fgtsAntecipado + amount) * 100) / 100;
+
+    var t = {
+      id: newId(), type: 'credit', title: 'Antecipação FGTS',
+      subtitle: nome + ' · ' + parcelas + 'x',
+      amount: amount, description: 'Antecipação de saque-aniversário FGTS em ' + parcelas + 'x',
+      date: fmtDate(now), time: fmtTime(now), auth: fmtAuth(), hasReceipt: true
+    };
+    state.transactions.unshift(t);
+    save();
+    document.getElementById('fgtsSaldo').textContent = money(state.fgtsSaldo - state.fgtsAntecipado);
+    this.reset();
+    renderHome();
+    openReceipt(t.id);
+    toast('Antecipação aprovada! Valor creditado.');
+  });
+
+  /* INVESTIR CAIXINHAS */
+  function investirCaixinha(taxa){
+    var nome = taxa === 1.9 ? 'Caixinha Turbo (1,9% a.m.)' : 'Caixinha Renda Fixa (1,5% a.m.)';
+    var val = prompt('Quanto você quer investir na ' + nome + '?\nSaldo disponível: ' + money(state.balance));
+    if(val === null) return;
+    var amount = Math.round(Number(String(val).replace(',', '.')) * 100) / 100;
+    if(!isFinite(amount) || amount <= 0){ toast('Valor inválido.', true); return; }
+    if(amount > state.balance){ toast('Saldo insuficiente.', true); return; }
+
+    state.balance = Math.round((state.balance - amount) * 100) / 100;
+    if(taxa === 1.9) state.invest2 = Math.round((state.invest2 + amount) * 100) / 100;
+    else state.invest1 = Math.round((state.invest1 + amount) * 100) / 100;
+
+    var now = new Date();
+    state.transactions.unshift({
+      id: newId(), type: 'debit', title: 'Aplicação em Caixinha',
+      subtitle: taxa === 1.9 ? 'Caixinha Turbo' : 'Caixinha Renda Fixa',
+      amount: amount, description: 'Investimento em ' + nome,
+      date: fmtDate(now), time: fmtTime(now), auth: fmtAuth(), hasReceipt: true
+    });
+    save();
+    renderHome();
+    renderInvest();
+    toast('Investimento aplicado com sucesso.');
+  }
+
+  /* USAR CARTÃO */
+  document.getElementById('cardUseForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    var estab = document.getElementById('cuEstab').value.trim();
+    var tipo = document.getElementById('cuType').value;
+    var parcelas = document.getElementById('cuParcelas').value;
+    var amount = Math.round(Number(document.getElementById('cuAmount').value) * 100) / 100;
+
+    if(!estab){ toast('Informe o estabelecimento.', true); return; }
+    if(!isFinite(amount) || amount <= 0){ toast('Valor inválido.', true); return; }
+
+    var now = new Date();
+    var desc = tipo + (parcelas > 1 ? ' em ' + parcelas + 'x' : '') + ' · ' + estab;
+    var t = {
+      id: newId(), type: 'debit', title: 'Compra no cartão',
+      subtitle: estab, amount: amount, description: desc,
+      date: fmtDate(now), time: fmtTime(now), auth: fmtAuth(), hasReceipt: true
+    };
+    state.transactions.unshift(t);
+    save();
+    this.reset();
+    renderHome();
+    openReceipt(t.id);
+    toast('Compra realizada no cartão.');
+  });
+
+  /* DEPOSITAR */
   document.getElementById('addForm').addEventListener('submit', function(e){
     e.preventDefault();
     var amount = Math.round(Number(document.getElementById('addAmount').value) * 100) / 100;
     var desc = document.getElementById('addDescription').value.trim() || 'Depósito recebido';
-
-    if(!isFinite(amount) || amount <= 0){ toast('Informe um valor válido.', true); return; }
+    if(!isFinite(amount) || amount <= 0){ toast('Valor inválido.', true); return; }
 
     var now = new Date();
     state.balance = Math.round((state.balance + amount) * 100) / 100;
     state.transactions.unshift({
-      id: newId(),
-      type: 'credit',
-      title: desc,
-      subtitle: 'Crédito em conta',
-      amount: amount,
-      description: desc,
-      date: fmtDate(now),
-      time: fmtTime(now),
-      auth: fmtAuth()
+      id: newId(), type: 'credit', title: desc, subtitle: 'Crédito em conta',
+      amount: amount, description: desc, date: fmtDate(now), time: fmtTime(now),
+      auth: fmtAuth(), hasReceipt: true
     });
     save();
     this.reset();
@@ -768,115 +1028,11 @@ nav{position:fixed;bottom:0;left:0;right:0;z-index:30;background:#0b0b0ff5;backd
     toast('Depósito realizado.');
   });
 
+  /* PERFIL / RESET / LIMPAR */
   document.getElementById('profileForm').addEventListener('submit', function(e){
     e.preventDefault();
-    var name = document.getElementById('profileName').value.trim();
-    if(!name){ toast('Digite um nome.', true); return; }
-    state.profile = name;
-    save();
-    renderHome();
-    toast('Nome atualizado.');
-  });
-
-  document.getElementById('resetBtn').addEventListener('click', function(){
-    if(!confirm('Restaurar conta ao estado inicial?')) return;
-    state = { balance: INITIAL.balance, transactions: [], profile: INITIAL.profile, cardNumber: null, cardExpiry: null };
-    save();
-    renderHome();
-    renderStatement();
-    renderCard();
-    toast('Conta restaurada.');
-  });
-
-  document.getElementById('clearHistory').addEventListener('click', function(){
-    if(!confirm('Apagar todo o histórico?')) return;
-    state.transactions = [];
-    save();
-    renderHome();
-    renderStatement();
-    toast('Histórico apagado.');
-  });
-
-  document.getElementById('exportCsv').addEventListener('click', function(){
-    if(!state.transactions.length){ toast('Nada para exportar.', true); return; }
-    var lines = ['Data;Hora;Tipo;Titulo;Valor'];
-    state.transactions.forEach(function(t){
-      lines.push([t.date, t.time, t.type, t.title, String(t.amount).replace('.', ',')].join(';'));
-    });
-    var blob = new Blob(['\uFEFF' + lines.join('\n')], {type:'text/csv;charset=utf-8'});
-    var url = URL.createObjectURL(blob);
-    var a = document.createElement('a');
-    a.href = url;
-    a.download = 'extrato-nubank.csv';
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    setTimeout(function(){ URL.revokeObjectURL(url); }, 1500);
-  });
-
-  document.getElementById('saveReceipt').addEventListener('click', function(){
-    if(!lastReceipt){ toast('Nenhum comprovante selecionado.', true); return; }
-    var html = '<!DOCTYPE html><html lang="pt-BR"><head><meta charset="UTF-8">' +
-      '<title>Comprovante</title>' +
-      '<style>body{font-family:Arial,sans-serif;background:#0b0b0f;color:#fff;padding:26px;margin:0}' +
-      '.logo{display:inline-flex;align-items:center;justify-content:center;background:#820ad1;border-radius:10px;width:44px;height:44px;color:#fff;font-weight:900;font-size:22px;letter-spacing:-1.2px}' +
-      'h1{font-size:24px;font-weight:800;margin:12px 0 6px}' +
-      '.date{font-size:12px;color:#888;text-transform:uppercase;margin-bottom:12px}' +
-      '.status{display:inline-block;background:#153a2c;color:#36c98f;padding:5px 10px;border-radius:6px;font-size:11px;font-weight:700;margin-bottom:26px}' +
-      '.st{font-size:11px;font-weight:800;color:#820ad1;text-transform:uppercase;letter-spacing:1.2px;margin:22px 0 8px;padding-top:18px;border-top:1px solid #1a1a1f}' +
-      '.row{display:flex;justify-content:space-between;gap:16px;padding:15px 0;font-size:14px;border-bottom:1px solid #1a1a1f}' +
-      '.row .l{color:#8b8b93;flex:0 0 42%;font-size:13px}' +
-      '.row .v{color:#fff;text-align:right;flex:1;font-weight:500}' +
-      '.row.d .v{font-weight:700;font-size:16px}' +
-      '.box{background:#141418;border:1px solid #1f1f24;border-radius:12px;padding:20px;margin-top:26px;font-size:12.5px;line-height:1.7;color:#a8a8b0}' +
-      '.box .company{font-weight:600;color:#fff;display:block}' +
-      '.box .cnpj{overflow:hidden;white-space:nowrap;width:175px;display:block}' +
-      '.box .auth{display:block;margin-top:14px;color:#fff;font-weight:600}' +
-      '.box .code{display:block;color:#fff;word-break:break-all;font-family:ui-monospace,monospace;font-size:11.5px}' +
-      '.box .help{display:block;margin-top:14px;color:#7a7a82}' +
-      '.box .link{color:#820ad1;font-weight:700;text-decoration:none;display:inline-block;margin-top:6px}' +
-      '</style></head><body>' +
-      '<div class="logo">nu</div>' +
-      '<h1>' + document.getElementById('receiptTitle').textContent + '</h1>' +
-      '<div class="date">' + document.getElementById('receiptDate').textContent + '</div>' +
-      '<div class="status">Concluído</div>' +
-      '<div class="row d"><span class="l">Valor</span><span class="v">' + document.getElementById('receiptAmount').textContent + '</span></div>' +
-      '<div class="st">Quem recebeu</div>' +
-      '<div class="row"><span class="l">Nome</span><span class="v">' + document.getElementById('receiptReceiver').textContent + '</span></div>' +
-      '<div class="row"><span class="l">CPF/CNPJ</span><span class="v">' + document.getElementById('receiptDoc').textContent + '</span></div>' +
-      '<div class="row"><span class="l">Chave Pix</span><span class="v">' + document.getElementById('receiptKey').textContent + '</span></div>' +
-      '<div class="row"><span class="l">Tipo da chave</span><span class="v">' + document.getElementById('receiptKeyType').textContent + '</span></div>' +
-      '<div class="row"><span class="l">Instituição</span><span class="v">' + document.getElementById('receiptInst').textContent + '</span></div>' +
-      '<div class="row"><span class="l">Agência</span><span class="v">' + document.getElementById('receiptAgency').textContent + '</span></div>' +
-      '<div class="row"><span class="l">Conta</span><span class="v">' + document.getElementById('receiptAccount').textContent + '</span></div>' +
-      '<div class="st">Quem pagou</div>' +
-      '<div class="row"><span class="l">Nome</span><span class="v">' + document.getElementById('receiptPayer').textContent + '</span></div>' +
-      '<div class="row"><span class="l">Instituição</span><span class="v">NU Pagamentos S.A.</span></div>' +
-      '<div class="st">Sobre a transação</div>' +
-      '<div class="row"><span class="l">Data</span><span class="v">' + document.getElementById('receiptDateFull').textContent + '</span></div>' +
-      '<div class="row"><span class="l">Horário</span><span class="v">' + document.getElementById('receiptTime').textContent + '</span></div>' +
-      '<div class="row"><span class="l">Descrição</span><span class="v">' + document.getElementById('receiptDesc').textContent + '</span></div>' +
-      '<div class="box">' +
-      '<span class="company">Nu Pagamentos S.A. - Instituição de Pagamento</span>' +
-      '<span class="cnpj">CNPJ 18.236.120/0001-58</span>' +
-      '<span class="auth">Código de autenticação:</span>' +
-      '<span class="code">' + document.getElementById('receiptAuth').textContent + '</span>' +
-      '<span class="help">Estamos aqui para ajudar se você tiver alguma dúvida.</span>' +
-      '<a class="link" href="#">Me ajuda →</a>' +
-      '</div></body></html>';
-    var blob = new Blob([html], {type:'text/html;charset=utf-8'});
-    var url = URL.createObjectURL(blob);
-    var a = document.createElement('a');
-    a.href = url;
-    a.download = 'comprovante-' + lastReceipt.id + '.html';
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    setTimeout(function(){ URL.revokeObjectURL(url); }, 1500);
-  });
-
-  renderHome();
-  renderStatement();
-  renderCard();
+    var name = document.getElementById('fgtsSaldo').textContent = money(state.fgtsSaldo - state.fgtsAntecipado);
 })();
-</scri
+</script>
+</body>
+</html>
